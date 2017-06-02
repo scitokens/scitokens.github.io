@@ -1,2 +1,4 @@
-# scitokens.org
+---
+title: SciTokens
+---
 Stay tuned...
