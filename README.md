@@ -1,1 +1,1 @@
-# scitokens.github.io
+# scitokens.org
