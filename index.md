@@ -1,4 +1,0 @@
----
-title: SciTokens
----
-Stay tuned...
