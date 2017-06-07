@@ -2,8 +2,6 @@
 layout: default
 ---
 
-Future home of the SciTokens project.
-
 # [](#header-1)Email Lists
 
 | Name                    | Subscribe                                 | Archives                                                     |
