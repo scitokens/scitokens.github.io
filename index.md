@@ -4,7 +4,5 @@ layout: default
 
 # [](#header-1)Email Lists
 
-| Name                    | Subscribe                                 | Archives                                                     |
-|:------------------------|:------------------------------------------|:-------------------------------------------------------------|
-| SciTokens Announcements | [announce+subscribe@scitokens.org](mailto:announce+subscribe@scitokens.org) | [https://groups.google.com/a/scitokens.org/d/forum/announce](https://groups.google.com/a/scitokens.org/d/forum/announce) |
-| SciTokens Discussion    | [discuss+subscribe@scitokens.org](mailto:discuss+subscribe@scitokens.org)  | [https://groups.google.com/a/scitokens.org/d/forum/discuss](https://groups.google.com/a/scitokens.org/d/forum/discuss) |
+*   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
+*   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))
