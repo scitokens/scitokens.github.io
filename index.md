@@ -11,6 +11,23 @@ We believe that distributed, scientific computing community has unique authoriza
 
 In distributed computing, a natural unit of organization is the "virtual organization" (VO), typically a group or community representing a scient domain or experiment that might span several physical institutions (such as a university of lab).  The VO has its own mechanisms to determine membership and access policies for resources it owns.  SciTokens aims to provide an infrastructure that allows the VO to issue bearer tokens that focus on the _capabilities_ the bearer should have within the VO's namespace, as opposed to the _identity_ of the bearer.  This frees resource providers from needing to duplicate VO authorization policies based on identity mapping.
 
+SciTokens Architecture
+----------------------
+
+The SciTokens project aims to demonstrate a specific data access architecture for use with LIGO and LSST workflows.  The architecture is shown below:
+
+![SciTokens data architecture](img/SciTokens-Model-2.png)
+
+Users logged in to a specific host will be able to generate a _refresh_ token and store it on the local token manager.  They can then submit jobs to the local queue manager.  When the queue manager is prepared to execute the user's jobs, it will contact the token manager to create an _access token_.  The access token is sent to the execute host and placed in the job runtime environment.  When the job subsequently attempts to access data, it will utilize the access token to gain authorization.
+
+Thus, the SciTokens architecture requires development of the following concepts:
+
+0.  Token issuing and generation workflow between the VO and the submit host.
+1.  Token format and verification.
+2.  An authorization claims language and domain-specific claim validation rules.
+
+The project will bring these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system.
+
 # [](#header-1)Email Lists
 
 As SciTokens ramps up, we will post draft technical documents describing the overall architecture, the token format, and the runtime environment.  In the meantime, feel free to subscribe to one of our project email lists:
