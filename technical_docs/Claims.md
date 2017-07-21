@@ -17,7 +17,10 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
 * *exp* (Expiration Time): The interpretation for `exp` is unchanged from the RFC, but this is considered a CRITICAL attribute for a SciToken.  The motivation behind the combination of `nbf` and `exp` being marked as critical is to allow resources to enforce maximum token lifetime limits.
 
-* *iss* (Issuer): The issuer of the SciTokens.  VOs are strongly encouraged to populate the field; it MAY contain information local to the VO context (such as the host issuing the token).  SciTokens uses the `vo` claim name to identify the issuer in the global context.
+* *iss* (Issuer): The issuer of the SciTokens; this MUST be populated.  It MUST contain a unique URL for the organization; this unique key will later be used for validation and bootstrapping trust roots.
+
+* *aud* (Audience): A service URI the SciToken is authorized to access (note: requesting this to be a URI is a slight narrowing of the definition from RFC7519).  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint.  The `aud` claim is OPTIONAL.
+
 
 SciToken-specific Claims
 ------------------------
@@ -35,16 +38,14 @@ utilize the URI form.  A SciTokens validator MUST accept either URI or non-URI f
 
 * *vo* (Virtual Organization): https://scitokens.org/v1/vo. The virtual organization issuing the token.  This MUST be globally unique for the community utilizing the SciToken.  It MUST be utilized to determine the appropriate trust roots for token verification.  If present in a token, it MUST also be present in the header.  A token chain MUST have the VO specified in the base token.
 
-* *op* (Authorized Operation): https://scitokens.org/v1/op.  A list of operations the bearer is allowed to perform.  Known operations are:
+* *scope* (OAuth scope): This is identical in semantics to the scope attribute in an OAuth token.  However, for SciTokens, we aim to define a common set of storage scopes.  The interpretation of this is a list of operations the bearer is allowed to perform.  Known operations are:
 
-   * `read`: Read data.
-   * `write`: Write data.
-   * `queue`: Submit a task or a job to a queueing service.
-   * `execute`: Immediately launch or execute a task.
+   * `read`: https://scitokens.org/v1/scope/read. Read data.
+   * `write`: https://scitokens.org/v1/scope/write. Write data.
+   * `queue`: https://scitokens.org/v1/scope/queue. Submit a task or a job to a queueing service.
+   * `execute`: https://scitokens.org/v1/scope/execute. Immediately launch or execute a task.
 
-   The operation definitions are currently kept open-ended and intended to be interpreted by the specific user community.  The `op` claim is OPTIONAL.
-
-* *svc* (Service): https://scitokens.org/v1/svc.  A service URI the SciToken is authorized to access.  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint.  The `svc` claim is OPTIONAL.
+   The operation definitions are currently kept open-ended and intended to be interpreted by the specific user community.  The `scope` claim is REQUIRED.
 
 * *site* (Site): https://scitokens.org/v1/site.  The "site name" of the service the SciToken is authorized to access.  Unlike the `svc` claim, the the site name is considered to be within the VO context, although site naming scheme may be organized by a community (such as a grid organization) or between the VO and site.
 
@@ -59,24 +60,24 @@ In this section, we only show the token payload, not base64-encoded, and remove 
 A LIGO user who can read any LIGO file may need the following token:
 
 ```
-{"op": "read", "path": "/", "vo": "ligo"}
+{"scope": "read", "path": "/", "iss": "https://cms.cern/oauth"}
 ```
 
 This is equivalent to the following URI-form:
 
 ```
-{"https://scitokens.org/v1/op": "read", "https://scitokens.org/v1/path": "/", "https://scitokens.org/v1/vo": "ligo"}
+{"scope": "https://scitokens.org/v1/scope/read", "https://scitokens.org/v1/path": "/", "iss": "https://ligo.org/oauth"}
 ```
 
 To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS site T2_US_Nebraska, a user would utilize the following token:
 
 ```
-{"op": "write", "path": "/store/user/bbockelm", "vo": "cms"}
+{"scope": "write", "path": "/store/user/bbockelm", "iss": "https://cms.cern/oauth"}
 ```
 
 To further restrict the permission given to an individual job, one may chose to further restrict the above token to a specific sub-directory via chaining tokens:
 
 ```
-{"op": "write", "path": "/store/user/bbockelm", "vo": "cms"}, {"path": "/store/user/bbockelm/job_1"}
+{"scope": "write", "path": "/store/user/bbockelm", "iss": "https://cms.cern/oath"}, {"path": "/store/user/bbockelm/job_1"}
 ```
 
