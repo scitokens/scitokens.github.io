@@ -17,7 +17,7 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
 * *exp* (Expiration Time): The interpretation for `exp` is unchanged from the RFC, but this is considered a CRITICAL attribute for a SciToken.  The motivation behind the combination of `nbf` and `exp` being marked as critical is to allow resources to enforce maximum token lifetime limits.
 
-* *iss* (Issuer): The issuer of the SciTokens; this MUST be populated.  It MUST contain a unique URL for the organization; this unique key will later be used for validation and bootstrapping trust roots.
+* *iss* (Issuer): The issuer of the SciTokens; this MUST be populated in a token chain.  It MUST contain a unique URL for the organization; this unique key will later be used for validation and bootstrapping trust roots.  This is used to identify the virtual organization (VO) that issues the token; it is expected that services maintain a map of issuer URLs to coarse-grained authorizations.
 
 * *aud* (Audience): A service URI the SciToken is authorized to access (note: requesting this to be a URI is a slight narrowing of the definition from RFC7519).  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint.  The `aud` claim is OPTIONAL.
 
@@ -35,8 +35,6 @@ The SciTokens project defines JWT claims specific to our problem domain.  From R
 
 In the long-term, we hope to have our claim names registered with IANA.  Until then, we will
 utilize the URI form.  A SciTokens validator MUST accept either URI or non-URI form.
-
-* *vo* (Virtual Organization): https://scitokens.org/v1/vo. The virtual organization issuing the token.  This MUST be globally unique for the community utilizing the SciToken.  It MUST be utilized to determine the appropriate trust roots for token verification.  If present in a token, it MUST also be present in the header.  A token chain MUST have the VO specified in the base token.
 
 * *scope* (OAuth scope): This is identical in semantics to the scope attribute in an OAuth token.  However, for SciTokens, we aim to define a common set of storage scopes.  The interpretation of this is a list of operations the bearer is allowed to perform.  Known operations are:
 
