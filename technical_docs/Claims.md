@@ -45,7 +45,7 @@ utilize the URI form.  A SciTokens validator MUST accept either URI or non-URI f
 
    The operation definitions are currently kept open-ended and intended to be interpreted by the specific user community.  The `scope` claim is REQUIRED.
 
-* *site* (Site): https://scitokens.org/v1/site.  The "site name" of the service the SciToken is authorized to access.  Unlike the `svc` claim, the the site name is considered to be within the VO context, although site naming scheme may be organized by a community (such as a grid organization) or between the VO and site.
+* *site* (Site): https://scitokens.org/v1/site.  The "site name" of the service the SciToken is authorized to access.  Unlike the `svc` claim, the the site name is considered to be within the VO context, although site naming scheme may be organized by a community (such as a grid organization) or between the VO and site.  Since the `site` is within the VO context, a single service may recognize several site names.  There is no mechanism to ensure a site name is globally unique.
 
 * *path* (Path): https://scitokens.org/v1/path.  The path this token is authorized to access, relative to the VOs base path on a storage system.  _NOTE_: it is understood this path should be normalized to some extent (to consider `/ligo` and `//ligo` the same location), but defining this normalization has not yet been done).
 
@@ -79,13 +79,14 @@ This is equivalent to the following URI-form:
 
 Note that the `path` claim is implicitly relative to a base authorization for the LIGO organization.  Here, `/` allows access to all LIGO files, _not_ all files in the storage service..
 
-To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS site T2_US_Nebraska, a user would utilize the following token:
+To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS site `T2_US_Nebraska`, a user would utilize the following token:
 
 ```
 {
    "scope": "write",
    "path":  "/store/user/bbockelm",
-   "iss":   "https://cms.cern/oauth"
+   "iss":   "https://cms.cern/oauth",
+   "site":  "T2_US_Nebraska"
 }
 ```
 
@@ -95,8 +96,9 @@ To further restrict the permission given to an individual job, one may chose to 
 {
    "scope": "write",
    "path":  "/store/user/bbockelm",
-   "iss":   "https://cms.cern/oath"
-},
+   "iss":   "https://cms.cern/oath",
+   "site":  "T2_US_Nebraska"
+}
 {
    "path":  "/store/user/bbockelm/job_1"
 }
