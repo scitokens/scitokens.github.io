@@ -53,29 +53,52 @@ utilize the URI form.  A SciTokens validator MUST accept either URI or non-URI f
 Examples
 --------
 
-In this section, we only show the token payload, not base64-encoded, and remove the standard claims in orderto improve readability.
+In this section, we only show the token payload, not base64-encoded, and remove the standard claims in order to improve readability.
+
+Suppose we have two token-issuing services, `https://cms.cern/oauth` for the CMS organization and `https://ligo.org/oauth` for LIGO.
 
 A LIGO user who can read any LIGO file may need the following token:
 
 ```
-{"scope": "read", "path": "/", "iss": "https://cms.cern/oauth"}
+{
+   "scope": "read",
+   "path":  "/",
+   "iss":  "https://cms.cern/oauth"
+}
 ```
 
 This is equivalent to the following URI-form:
 
 ```
-{"scope": "https://scitokens.org/v1/scope/read", "https://scitokens.org/v1/path": "/", "iss": "https://ligo.org/oauth"}
+{
+   "scope":                         "https://scitokens.org/v1/scope/read",
+   "https://scitokens.org/v1/path": "/",
+   "iss":                           "https://ligo.org/oauth"
+}
 ```
+
+Note that the `path` claim is implicitly relative to a base authorization for the LIGO organization.  Here, `/` allows access to all LIGO files, _not_ all files in the storage service..
 
 To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS site T2_US_Nebraska, a user would utilize the following token:
 
 ```
-{"scope": "write", "path": "/store/user/bbockelm", "iss": "https://cms.cern/oauth"}
+{
+   "scope": "write",
+   "path":  "/store/user/bbockelm",
+   "iss":   "https://cms.cern/oauth"
+}
 ```
 
 To further restrict the permission given to an individual job, one may chose to further restrict the above token to a specific sub-directory via chaining tokens:
 
 ```
-{"scope": "write", "path": "/store/user/bbockelm", "iss": "https://cms.cern/oath"}, {"path": "/store/user/bbockelm/job_1"}
+{
+   "scope": "write",
+   "path":  "/store/user/bbockelm",
+   "iss":   "https://cms.cern/oath"
+},
+{
+   "path":  "/store/user/bbockelm/job_1"
+}
 ```
 
