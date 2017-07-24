@@ -28,6 +28,15 @@ Thus, the SciTokens architecture requires development of the following concepts:
 
 The project will bring these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system.
 
+Technical Documents
+-------------------
+
+The SciTokens project is in the process of defining the precise token format and validation/verification rules for utilizing SciTokens, building heavily on top of the OAuth2 framework.
+
+The following is a list of *draft* documents we are working on:
+
+*   [SciTokens Claims Language](technical_docs/Claims): specifics on the formatting and contents of the tokens.
+
 # [](#header-1)Email Lists
 
 As SciTokens ramps up, we will post draft technical documents describing the overall architecture, the token format, and the runtime environment.  In the meantime, feel free to subscribe to one of our project email lists:
