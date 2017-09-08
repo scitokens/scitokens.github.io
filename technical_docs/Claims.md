@@ -1,6 +1,6 @@
 
-SciToken Claims Language
-========================
+SciToken Claims and Scopes Language
+====================================
 
 Each SciToken has one or more claim associated with it.  These claims are typically used to indicate the authorizations the SciToken bearer may have -- but other use cases exist (such as adding monitoring or auditing information into the token chain).
 
@@ -36,19 +36,89 @@ The SciTokens project defines JWT claims specific to our problem domain.  From R
 In the long-term, we hope to have our claim names registered with IANA.  Until then, we will
 utilize the URI form.  A SciTokens validator MUST accept either URI or non-URI form.
 
-* *scope* (OAuth scope): This is identical in semantics to the scope attribute in an OAuth token.  However, for SciTokens, we aim to define a common set of storage scopes.  The interpretation of this is a list of operations the bearer is allowed to perform.  Known operations are:
+* *authz*: A list of authorized activities the bearer of this token may perform.  For SciTokens, we aim to define a common set of storage authorizations, but envision additional authorizations will be added to meet new use cases.  The interpretation of this is a list of operations the bearer is allowed to perform.  Known operations are:
 
-   * `read`: https://scitokens.org/v1/scope/read. Read data.
-   * `write`: https://scitokens.org/v1/scope/write. Write data.
-   * `queue`: https://scitokens.org/v1/scope/queue. Submit a task or a job to a queueing service.
-   * `execute`: https://scitokens.org/v1/scope/execute. Immediately launch or execute a task.
+   * `read`: https://scitokens.org/v1/authz/read. Read data.
+   * `write`: https://scitokens.org/v1/authz/write. Write data.
+   * `queue`: https://scitokens.org/v1/authz/queue. Submit a task or a job to a queueing service.
+   * `execute`: https://scitokens.org/v1/authz/execute. Immediately launch or execute a task.
 
-   The operation definitions are currently kept open-ended and intended to be interpreted by the specific user community.  The `scope` claim is REQUIRED.
+   The operation definitions are currently kept open-ended and intended to be interpreted by the specific user community.
 
-* *site* (Site): https://scitokens.org/v1/site.  The "site name" of the service the SciToken is authorized to access.  Unlike the `svc` claim, the the site name is considered to be within the VO context, although site naming scheme may be organized by a community (such as a grid organization) or between the VO and site.  Since the `site` is within the VO context, a single service may recognize several site names.  There is no mechanism to ensure a site name is globally unique.
+   When rendered in JSON, the value of the `authz` claim should be a JSON list if multiple claims are present.  For example, a read-only token may have a claim of `"authz": "read"` while a read/write token may have a claim of `"authz": ["read", "write"]`.
 
-* *path* (Path): https://scitokens.org/v1/path.  The path this token is authorized to access, relative to the VOs base path on a storage system.  _NOTE_: it is understood this path should be normalized to some extent (to consider `/ligo` and `//ligo` the same location), but defining this normalization has not yet been done).
+   The `authz` claim is REQUIRED.
 
+* *site* (Site): https://scitokens.org/v1/site.  The "site name" of the service the SciToken is authorized to access.  Unlike the `aud` claim, the the site name is considered to be within the VO context, although site naming scheme may be organized by a community (such as a grid organization) or between the VO and site.  Since the `site` is within the VO context, a single service may recognize several site names.  There is no mechanism to ensure a site name is globally unique.
+
+* *path* (Path): https://scitokens.org/v1/path.  The path this token is authorized to access, relative to the VOs base path on a storage system.  When examining the contents of this attribute, paths _must_ be normalized according to [section 6 of RFC 3986](https://tools.ietf.org/html/rfc3986#section-6).  Hence, `///foo/bar/../baz` and `/foo/baz` are considered the same path for the purpose of determining access permissions.  Multiple path components may be specified as a JSON list; in such a case, the *authz* permissions are applied to all paths.  If `read` or `write` authorizations are given, then `path` MUST be specified; no default value may be assumed.
+
+SciTokens Scopes
+----------------
+
+The claims language defined by JWT is based on JSON, making it extremely flexible.  However, when creating an authorization token using the OAuth2 protocol, the client may only provide a space-delimited set of scopes; it is up to the authorization server to generate an appropriate SciToken with a list of claims.  SciTokens aims to standardize a set of scopes and the corresponding mapping to claims.
+
+* *site:NAME*.  Use this scope to request a site claim for a site `NAME` in the returned authorization token.
+* *authz:AUTHZ:PATH*.  Use this scope to request authorization against a given path.
+
+The server-side parsing of scopes should follow [Section 3.3 of RFC6749](https://tools.ietf.org/html/rfc6749#section-3.3).
+
+Care must be taken by the server in generating SciTokens in response to a request with multiple `authz` scopes.  Consider:
+
+```
+authz:read:/foo
+authz:write:/foo
+```
+
+The corresponding token claims would be:
+
+```
+{
+   "authz": ["read", "write"],
+   "path":  "/foo"
+}
+```
+
+The authorizations in the token match the requested scopes.  However, this example scope request is problematic:
+
+
+```
+authz:read:/foo
+authz:write:/bar
+```
+
+A naive corresponding SciToken may be:
+
+```
+{
+   "authz": ["read", "write"],
+   "path":  ["/foo", "/bar"]
+}
+```
+
+However, this is problematic as the token provides more authorization than requested: it can write to `/foo`, while the client only
+requested write access to `/bar`.  Even if the identity has write access to `/bar`, it is possible the client intended to drop that
+for this token.
+
+A server MUST NOT return tokens with more authorization granted than requested.  A server MAY return a token with less authorization;
+this may result in unexpected behavior for the client so a server SHOULD NOT return a token with less authorization.
+For example, if the client requests the following scopes:
+
+```
+authz:read:/foo
+authz:write:/foo/subdir
+```
+
+the server MAY return:
+
+```
+{
+   "authz": ["read", "write"],
+   "path":  "/foo/subdir"
+}
+```
+
+However, it is suggested that the server respond with an error instead.
 
 Examples
 --------
@@ -61,7 +131,7 @@ A LIGO user who can read any LIGO file may need the following token:
 
 ```
 {
-   "scope": "read",
+   "authz": "read",
    "path":  "/",
    "iss":  "https://cms.cern/oauth"
 }
@@ -71,26 +141,37 @@ This is equivalent to the following URI-form:
 
 ```
 {
-   "scope":                         "https://scitokens.org/v1/scope/read",
-   "https://scitokens.org/v1/path": "/",
-   "iss":                           "https://ligo.org/oauth"
+   "https://scitokens.org/v1/authz": "https://scitokens.org/v1/authz/read",
+   "https://scitokens.org/v1/path":  "/",
+   "iss":                            "https://ligo.org/oauth"
 }
 ```
 
-Note that the `path` claim is implicitly relative to a base authorization for the LIGO organization.  Here, `/` allows access to all LIGO files, _not_ all files in the storage service..
+Note that the `path` claim is implicitly relative to a base authorization for the LIGO organization.  Here, `/` allows access to all LIGO files, _not_ all files in the storage service.
 
 To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS site `T2_US_Nebraska`, a user would utilize the following token:
 
 ```
 {
-   "scope": "write",
+   "authz": "write",
    "path":  "/store/user/bbockelm",
    "iss":   "https://cms.cern/oauth",
    "site":  "T2_US_Nebraska"
 }
 ```
 
-To further restrict the permission given to an individual job, one may chose to further restrict the above token to a specific sub-directory via chaining tokens:
+The implementation of `site` is purposely ambiguous; hence, the `aud` claim may be used to restrict a token to a specific endpoint:
+
+```
+{
+   "authz": "write",
+   "path":  "/store/user/bbockelm",
+   "iss":   "https://cms.cern/oauth",
+   "aud":   "https://transfer.unl.edu"
+}
+```
+
+If delegating tokens is supported, one can further restrict the permission given to an individual job.   To further restrict the above token to a specific sub-directory, the token chain would look like the following:
 
 ```
 {
