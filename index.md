@@ -37,6 +37,7 @@ The following is a list of *draft* documents we are working on:
 
 *   [SciTokens Claims Language](technical_docs/Claims): specifics on the formatting and contents of the tokens.
 *   [Verification Procedure](technical_docs/Verification): how to verify and validate a token.
+*   [SciTokens Library Reference](scitokens): Auto-generated reference documentation for the SciTokens python library.
 
 # [](#header-1)Email Lists
 
