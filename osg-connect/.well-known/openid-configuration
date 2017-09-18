@@ -1,0 +1,4 @@
+{  
+   "issuer":"https://scitokens.org/osg-connect",
+   "jwks_uri":"https://scitokens.org/osg-connect/oauth2/certs"
+}
