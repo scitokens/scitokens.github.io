@@ -1,3 +1,4 @@
 theme: jekyll-theme-slate
 title: SciTokens
 description: Federated Authorization Ecosystem for Distributed Scientific Computing
+include: ["osg-connect/.well-known"]
