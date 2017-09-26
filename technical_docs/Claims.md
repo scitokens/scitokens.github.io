@@ -21,6 +21,8 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
 * *aud* (Audience): A service URI the SciToken is authorized to access (note: requesting this to be a URI is a slight narrowing of the definition from RFC7519).  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint.  The `aud` claim is OPTIONAL.
 
+* *jti* (JWT ID): The interpretation for `jti` is unchanged from the RFC. It is a unique identifier that protects against replay attacks and enables revocation.
+
 
 SciToken-specific Claims
 ------------------------
