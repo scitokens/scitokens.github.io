@@ -50,7 +50,7 @@ Currently, the SciTokens domain-specific claims include:
 
    For `read` and `write` scopes, `$PATH` must be specified; if not specified in the scope, the path may be assumed to be `/`.  When examining the contents of this attribute, paths _must_ be normalized according to [section 6 of RFC 3986](https://tools.ietf.org/html/rfc3986#section-6).  Hence, `///foo/bar/../baz` and `/foo/baz` are considered the same path for the purpose of determining access permissions.  As in RFC 3986, each component of the path must be URL-escaped.
 
-   When rendered in JSON, the value of the `scp` claim should be a space-separated list (as opposed to a JSON list) in order to match the behavior of scopes in OAuth2.
+   When rendered in JSON, the value of the `scp` claim should be a a JSON list.
 
    The `scp` claim is REQUIRED.  Note that the `scp` claim is proposed for standardization as part of the [OAuth token exchange](https://datatracker.ietf.org/doc/draft-ietf-oauth-token-exchange/) draft RFC.
 
