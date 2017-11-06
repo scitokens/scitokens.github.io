@@ -33,11 +33,17 @@ Technical Documents
 
 The SciTokens project is in the process of defining the precise token format and validation/verification rules for utilizing SciTokens, building heavily on top of the OAuth2 framework.
 
-The following is a list of *draft* documents we are working on:
+The following is a list of technical documents pertaining to the SciTokens approach:
 
 *   [SciTokens Claims Language](technical_docs/Claims): specifics on the formatting and contents of the tokens.
 *   [Verification Procedure](technical_docs/Verification): how to verify and validate a token.
 *   [SciTokens Library Reference](scitokens): Auto-generated reference documentation for the SciTokens python library.
+
+Demonstrations and Presentations
+--------------------------------
+*   [SciTokens introduction to the WLCG GDB](presentations/SciTokens-GDB-Oct-2017.pdf).  Given by Brian Bockelman in October 2017.
+*   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
+*   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
 
 # [](#header-1)Email Lists
 
