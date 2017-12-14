@@ -26,7 +26,7 @@ Thus, the SciTokens architecture requires development of the following concepts:
 1.  Token format and verification.
 2.  An authorization claims language and domain-specific claim validation rules.
 
-The project will bring these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system.
+The project will bring these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system. For more details, see our [project proposal](scitokens-proposal-public.pdf).
 
 Technical Documents
 -------------------
