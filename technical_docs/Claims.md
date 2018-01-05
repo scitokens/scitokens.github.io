@@ -127,7 +127,7 @@ A LIGO user who can read any LIGO file may need the following token:
 ```
 {
    "scp": "read:/",
-   "iss":  "ttps://ligo.org/oauth"
+   "iss":  "https://ligo.org/oauth"
 }
 ```
 
