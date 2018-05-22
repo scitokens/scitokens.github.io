@@ -44,6 +44,7 @@ Demonstrations and Presentations
 *   [SciTokens introduction to the WLCG GDB](presentations/SciTokens-GDB-Oct-2017.pdf).  Given by Brian Bockelman in October 2017.
 *   [Introduction to SciTokens presentation to SC17 MAGIC Meeting](presentations/Introduction_to_SciTokens_MAGIC_SC17.pdf). Given by Todd Tannenbaum in November 2017.
 *   [CILogon and SciTokens presentation to EUGridPMA](presentations/CILogon-SciTokens-EUGridPMA-20180122.pdf). Given by Jim Basney in January 2018.
+*   [Introduction to SciTokens presentation to HTCondor Week](presentations/SciTokens-HTCondorWeek2018.pdf). Given by Brian Bockelman and Jim Basney in May 2018.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
 
