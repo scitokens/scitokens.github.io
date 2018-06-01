@@ -37,7 +37,7 @@ The SciTokens project defines JWT claims behavior specific to our problem domain
 
 Currently, the SciTokens domain-specific claims include:
 
-* *scp*: A list of authorized activities the bearer of this token may perform.  For SciTokens, we aim to define a common set of storage authorizations, but envision additional authorizations will be added to meet new use cases.  The interpretation of this is a list of operations the bearer is allowed to perform.  Known authorizations are:
+* *scope*: A JSON string containing a space-separated list of scopes associated with this token, in the format described in Section 3.3 of [RFC 6749](https://tools.ietf.org/html/rfc6749)[RFC6749].  For SciTokens, we aim to define a common set of storage authorizations, but envision additional authorizations will be added to meet new use cases.  The interpretation of this is a list of operations the bearer is allowed to perform.  Known authorizations are:
 
    * `read`: Read data from a resource.
    * `write`: Write data from a resource.
@@ -50,9 +50,7 @@ Currently, the SciTokens domain-specific claims include:
 
    For `read` and `write` scopes, `$PATH` must be specified; if not specified in the scope, the path may be assumed to be `/`.  When examining the contents of this attribute, paths _must_ be normalized according to [section 6 of RFC 3986](https://tools.ietf.org/html/rfc3986#section-6).  Hence, `///foo/bar/../baz` and `/foo/baz` are considered the same path for the purpose of determining access permissions.  As in RFC 3986, each component of the path must be URL-escaped.
 
-   When rendered in JSON, the value of the `scp` claim should be a a JSON list.
-
-   The `scp` claim is REQUIRED.  Note that the `scp` claim is proposed for standardization as part of the [OAuth token exchange](https://datatracker.ietf.org/doc/draft-ietf-oauth-token-exchange/) draft RFC.
+   The `scope` claim is REQUIRED.
 
 SciTokens Scopes
 ----------------
@@ -76,7 +74,7 @@ the server MAY return a token containing the following:
 ```
 {
    ...
-   "scp": "read:/foo/subdir write:/foo/subdir
+   "scope": "read:/foo/subdir write:/foo/subdir
    ...
 }
 ```
@@ -97,7 +95,7 @@ Suppose we would like to sign the following JWT header and payload:
   "exp": 1509991790,
   "iss": "https://scitokens.org/cms",
   "iat": 1509988190,
-  "scp": "read:/store write:/store/user/bbockelm",
+  "scope": "read:/store write:/store/user/bbockelm",
   "nbf": 1509988190
 }
 ```
@@ -126,7 +124,7 @@ A LIGO user who can read any LIGO file may need the following token:
 
 ```
 {
-   "scp": "read:/",
+   "scope": "read:/",
    "iss":  "https://ligo.org/oauth"
 }
 ```
@@ -135,18 +133,18 @@ This is equivalent to the following URI-form:
 
 ```
 {
-   "scp": "https://scitokens.org/v1/authz/read:/",
+   "scope": "https://scitokens.org/v1/authz/read:/",
    "iss": "https://ligo.org/oauth"
 }
 ```
 
-Note that the resource in the `scp` claim is implicitly relative to a base authorization for the LIGO organization.  Here, `/` allows access to all LIGO files, _not_ all files in the storage service.
+Note that the resource in the `scope` claim is implicitly relative to a base authorization for the LIGO organization.  Here, `/` allows access to all LIGO files, _not_ all files in the storage service.
 
 To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS site `T2_US_Nebraska`, a user would utilize the following token:
 
 ```
 {
-   "scp": "write:/store/user/bbockelm",
+   "scope": "write:/store/user/bbockelm",
    "iss":   "https://cms.cern/oauth",
    "site":  "T2_US_Nebraska"
 }
