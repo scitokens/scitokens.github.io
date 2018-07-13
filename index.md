@@ -46,6 +46,8 @@ Demonstrations and Presentations
 *   [CILogon and SciTokens presentation to EUGridPMA](presentations/CILogon-SciTokens-EUGridPMA-20180122.pdf). Given by Jim Basney in January 2018.
 *   [Introduction to SciTokens presentation to HTCondor Week](presentations/SciTokens-HTCondorWeek2018.pdf). Given by Brian Bockelman and Jim Basney in May 2018.
 *   [SciTokens in CVMFS presentation to CVMFS Coordination Meeting](presentations/Weitzel-CVMFS-SciTokens.pdf) Given by Derek Weitzel in June 2018.
+*   [Bootstrapping a (New?) LHC Data Transfer Ecosystem](presentations/DataEcosystem-CHEP18.pdf).  An overview of how LHC could transform its data transfer ecosystem, including the use of SciTokens.  Given by Brian Bockelman in July 2018.
+*   [Capability-Based Authorization for HEP](presentations/SciTokens-CHEP2018.pdf).  An outline of how capability-based authorization would benefit the High Energy Physics community.  Given by Brian Bockelman in July 2018.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
 
