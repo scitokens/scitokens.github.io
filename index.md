@@ -5,33 +5,45 @@ layout: default
 Overview
 ========
 
-The SciTokens project aims to build a federated ecosystem for authorization on distributed scientific computing infrastructures.
+The SciTokens project is building a federated ecosystem for authorization on distributed scientific computing infrastructures.
 
 We believe that distributed, scientific computing community has unique authorization needs that can be met by utilizing common web technologies, such as OAuth 2.0 and JSON Web Tokens (JWT).  The SciTokens team, a collaboration between technology providers and domain scientists, is working to build and demonstrate a new authorization approach at scale.
 
 In distributed computing, a natural unit of organization is the "virtual organization" (VO), typically a group or community representing a science domain or experiment that might span several physical institutions (such as a university of lab).  The VO has its own mechanisms to determine membership and access policies for resources it owns.  SciTokens aims to provide an infrastructure that allows the VO to issue bearer tokens that focus on the _capabilities_ the bearer should have within the VO's namespace, as opposed to the _identity_ of the bearer.  This frees resource providers from needing to duplicate VO authorization policies based on identity mapping.
 
+News
+----
+
+* July 25 2018: [SciTokens presentation at PEARC18](https://pearc18.conference-program.com/?page_id=10&id=pap190&sess=sess151)
+* May 22 2018: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1201/other-view)
+
 SciTokens Architecture
 ----------------------
 
-The SciTokens project aims to demonstrate a specific data access architecture for use with LIGO and LSST workflows.  The architecture is shown below:
+The SciTokens project is developing a data access architecture for use with LIGO and LSST workflows.  The architecture is shown below:
 
 ![SciTokens data architecture](img/SciTokens-Model-2.png)
 
-Users logged in to a specific host will be able to generate a _refresh_ token and store it on the local token manager.  They can then submit jobs to the local queue manager.  When the queue manager is prepared to execute the user's jobs, it will contact the token manager to create an _access token_.  The access token is sent to the execute host and placed in the job runtime environment.  When the job subsequently attempts to access data, it will utilize the access token to gain authorization.
+Users logged in to a specific host generate a _refresh_ token and store it on the local token manager.  They then submit jobs to the local queue manager.  When the queue manager is prepared to execute the user's jobs, it contacts the token manager to create an _access token_.  The queue manager sends the access token to the execute host and places it in the job runtime environment.  When the job subsequently attempts to access data, it uses the access token to gain authorization.
 
-Thus, the SciTokens architecture requires development of the following concepts:
+Thus, the SciTokens architecture builds on the following concepts:
 
 0.  Token issuing and generation workflow between the VO and the submit host.
 1.  Token format and verification.
 2.  An authorization claims language and domain-specific claim validation rules.
 
-The project will bring these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system. For more details, see our [project proposal](scitokens-proposal-public.pdf).
+The project is bringing these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system..
+
+References
+----------
+
+* Alex Withers, Brian Bockelman, Derek Weitzel, Duncan A. Brown, Jeff Gaynor, Jim Basney, Todd Tannenbaum, Zach Miller, "SciTokens: Capability-Based Secure Access to Remote Scientific Data", PEARC '18: Practice and Experience in Advanced Research Computing, July 2018, Pittsburgh, PA, USA. https://doi.org/10.1145/3219104.3219135 (preprint: https://arxiv.org/abs/1807.04728)
+* [SciTokens Project Proposal](scitokens-proposal-public.pdf)
 
 Technical Documents
 -------------------
 
-The SciTokens project is in the process of defining the precise token format and validation/verification rules for utilizing SciTokens, building heavily on top of the OAuth2 framework.
+The SciTokens project is defining the token format and validation/verification rules for utilizing SciTokens, building heavily on top of the OAuth2 framework.
 
 The following is a list of technical documents pertaining to the SciTokens approach:
 
