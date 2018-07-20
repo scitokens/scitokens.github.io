@@ -37,7 +37,7 @@ The project is bringing these concepts into a functioning infrastructure for its
 References
 ----------
 
-* Alex Withers, Brian Bockelman, Derek Weitzel, Duncan A. Brown, Jeff Gaynor, Jim Basney, Todd Tannenbaum, Zach Miller, "SciTokens: Capability-Based Secure Access to Remote Scientific Data", PEARC '18: Practice and Experience in Advanced Research Computing, July 2018, Pittsburgh, PA, USA. https://doi.org/10.1145/3219104.3219135 (preprint: https://arxiv.org/abs/1807.04728)
+* Alex Withers, Brian Bockelman, Derek Weitzel, Duncan A. Brown, Jeff Gaynor, Jim Basney, Todd Tannenbaum, Zach Miller, "SciTokens: Capability-Based Secure Access to Remote Scientific Data", PEARC '18: Practice and Experience in Advanced Research Computing, July 2018, Pittsburgh, PA, USA. [https://doi.org/10.1145/3219104.3219135](https://doi.org/10.1145/3219104.3219135) (preprint: [https://arxiv.org/abs/1807.04728](https://arxiv.org/abs/1807.04728))
 * [SciTokens Project Proposal](scitokens-proposal-public.pdf)
 
 Technical Documents
