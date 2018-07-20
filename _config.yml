@@ -1,4 +1,4 @@
 theme: jekyll-theme-slate
 title: SciTokens
 description: Federated Authorization Ecosystem for Distributed Scientific Computing
-include: .well-known
+include: .well-known favicon.ico favicon-16x16.png favicon-32x32.png
