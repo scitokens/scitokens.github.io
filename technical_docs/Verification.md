@@ -66,6 +66,6 @@ For tokens with no `ver` attribute or `scitoken:1.0`:
 For tokens with `ver` = `scitoken:2.0`
 
 * Unknown claims are ignored and not used for authorization.
-* Required Supported Claims:  ver, sub, nbf, exp, iss, aud, jti, iat, scope
+* Required Supported Claims:  `ver`, `sub`, `nbf`, `exp`, `iss`, `aud`, `jti`, `iat`, `scope`
 * Signature algorithms and RS256, ES256 MUST be supported.
 
