@@ -19,7 +19,7 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
 * *iss* (Issuer): The issuer of the SciTokens; this MUST be populated in a token chain.  It MUST contain a unique URL for the organization; this unique key will later be used for validation and bootstrapping trust roots.  This is used to identify the virtual organization (VO) that issues the token; it is expected that services maintain a map of issuer URLs to coarse-grained authorizations.
 
-* *aud* (Audience): A service the SciToken is authorized to access.  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint URI.  As in RFC7519, the `aud` claim is not necessarily a URI: for example, it might be the name of a target site.   The service may accept several different possible audiences; the service endpoint at `https://storage.example.com` may accept an audience of either `Site_Example` or `https://storage.example.com` but ought to reject an audience of `https://www.google.com`.  The `aud` claim is OPTIONAL.
+* *aud* (Audience): A service the SciToken is authorized to access.  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint URI.  As in RFC7519, the `aud` claim is not necessarily a URI: for example, it might be the name of a target site.   The service may accept several different possible audiences; the service endpoint at `https://storage.example.com` may accept an audience of either `Site_Example` or `https://storage.example.com` but ought to reject an audience of `https://www.google.com`.  The `aud` claim is OPTIONAL in version 1.0, mandatory in 2.0.
 
 * *jti* (JWT ID): The interpretation for `jti` is unchanged from the RFC. It is a unique identifier that protects against replay attacks, improves traceability of tokens through a distributed system, and enables revocation.  The `jti` claim is OPTIONAL.
 
@@ -97,21 +97,22 @@ Suppose we would like to sign the following JWT header and payload:
   "iss": "https://scitokens.org/cms",
   "iat": 1509988190,
   "scope": "read:/store write:/store/user/bbockelm",
-  "nbf": 1509988190
+  "nbf": 1509988190,
+  "ver": "scitoken:2.0",
+  "aud": "https://cms.example.com"
 }
 ```
 
 Then, the corresponding base64-encoded and signed payload would be (line breaks are given only for clarity; should not be included in the actual token):
 
 ```
-eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYm9ja2VsbSIsImV4cCI6MTUxMDAwMT
-I1MiwiaXNzIjoiaHR0cHM6Ly9kZW1vLnNjaXRva2Vucy5vcmciLCJpYXQiOjE1MTAwMDA2NTIsInNjc
-CI6InJlYWQ6L3N0b3JlIHdyaXRlOi9zdG9yZS91c2VyL2Jib2NrZWxtIiwibmJmIjoxNTEwMDAwNjUy
-fQ.oFYtTmTDDYiBpxj2jxKnFdRXoxKijspu3vTP990w4tnFVb91-5ahSCcHB82RpzyszzaDbCnU1PXo
-rN-psHawXh4pSKuv-OxtupSZlNE1_djPBgn84voRTj5pjgyS5L6EDBuyKzo1R0h9UuOJu7-VtgtbObY
-4TNx1GXdYZqQPYQFFqfiEsvG8LaRHpguCr-siTpoHFLQoYCRP8l8pHhyaXwwkNGfZJNAtNtj0UzuR_0
-lkrAjpx118PxmPa0pMA8FPdSNRLtY8T4CDUN4FbUk-E4-V9OE8HCqdYyRtLTPUASyGtRzMfn_clynW8
-BehtZjh9EneN9ceHPF_ddAFMrN_fA
+eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiYm9ja2VsbSIsImV4cCI6MTUwOTk5MT
+c5MCwiaXNzIjoiaHR0cHM6Ly9zY2l0b2tlbnMub3JnL2NtcyIsImlhdCI6MTUwOTk4ODE5MCwic2Nvc
+GUiOiJyZWFkOi9zdG9yZSB3cml0ZTovc3RvcmUvdXNlci9iYm9ja2VsbSIsIm5iZiI6MTUwOTk4ODE5
+MCwidmVyIjoic2NpdG9rZW46Mi4wIiwiYXVkIjoiaHR0cHM6Ly9jbXMuZXhhbXBsZS5jb20ifQ.fCty
+ZQQNPaowQ5FXFVIlbt2Qpb4ui8Bkl1qXpwLKI3FQ0AKP64Ozf7NLKI8nRHaAqh9XRQAxB9YtAJAeHri
+SN422-CraARoYyBdrZMtwlxphOLPkpuxbIusVYB3r4zIRt4BoB7NlqLqwVV2e5rGtkJGvi9tpY2FNr7
+eZ6eBrzAg
 ```
 
 Examples SciToken scope
@@ -151,7 +152,7 @@ To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS si
 }
 ```
 
-The implementation of `site` is purposely ambiguous; hence, the `aud` claim may be used to restrict a token to a specific endpoint:
+The implementation of `site` is purposely ambiguous; hence, the `aud` claim must be used to restrict a token to a specific endpoint:
 
 ```
 {
