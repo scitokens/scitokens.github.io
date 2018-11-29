@@ -23,6 +23,7 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
 * *jti* (JWT ID): The interpretation for `jti` is unchanged from the RFC. It is a unique identifier that protects against replay attacks, improves traceability of tokens through a distributed system, and enables revocation.  The `jti` claim is OPTIONAL.
 
+* *ver* (Version): The version of the token.  `ver` is used to version the claim formats and attribute names.  The format of the `ver` claim is: `<profile>:<version>`.  The `ver` claim is optional.  If absent, the default is `scitoken:1.0`
 
 SciToken Claim Semantics
 ------------------------
