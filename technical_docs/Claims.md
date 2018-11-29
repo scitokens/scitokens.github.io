@@ -99,7 +99,7 @@ Suppose we would like to sign the following JWT header and payload:
   "scope": "read:/store write:/store/user/bbockelm",
   "nbf": 1509988190,
   "ver": "scitoken:2.0",
-  "aud": "https://cms.example.com"
+  "aud": "https://transfer-server.example.com"
 }
 ```
 
