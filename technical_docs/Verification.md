@@ -55,7 +55,7 @@ A token's version is found in the `ver` attribute.  If absent, the `ver` is `sci
 
 ### Version 1.0
 
-For tokens with no `ver` attriibute or `scitoken:1.0`:
+For tokens with no `ver` attribute or `scitoken:1.0`:
 
 * All claims MUST be considered valid by the entity performing validation.  If there are any unknown claims attributes - or claim values that cannot be validated - the entire token must be considered INVALID.  A token must be considered completely valid or invalid.
 * Claim validation should proceed with the base token in any given chain; all parent token claims MUST be processed before a child's claims.  [This item will be updated in the future as we develop any use cases for chaining.]
