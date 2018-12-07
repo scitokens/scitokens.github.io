@@ -19,7 +19,15 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
 * *iss* (Issuer): The issuer of the SciTokens; this MUST be populated in a token chain.  It MUST contain a unique URL for the organization; this unique key will later be used for validation and bootstrapping trust roots.  This is used to identify the virtual organization (VO) that issues the token; it is expected that services maintain a map of issuer URLs to coarse-grained authorizations.
 
-* *aud* (Audience): A service the SciToken is authorized to access.  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint URI.  As in RFC7519, the `aud` claim is not necessarily a URI: for example, it might be the name of a target site.   The service may accept several different possible audiences; the service endpoint at `https://storage.example.com` may accept an audience of either `Site_Example` or `https://storage.example.com` but ought to reject an audience of `https://www.google.com`.  The `aud` claim is OPTIONAL in version 1.0, mandatory in 2.0.
+* *aud* (Audience): A service the SciToken is authorized to access.  For example, if the VO has write access to several storage services, this claim may be utilized to limit a token to a single endpoint URI.  As in RFC7519, the `aud` claim is not necessarily a URI: for example, it might be the name of a target site.   The service may accept several different possible audiences; the service endpoint at `https://storage.example.com` may accept an audience of either `Site_Example` or `https://storage.example.com` but ought to reject an audience of `https://www.google.com`.  Additionally, the `aud` can be a special value of `ANY`, where it would allow any audience to match.  The `aud` claim is OPTIONAL in version 1.0, mandatory in 2.0.
+
+  | Client      | Server      | Result  |
+  |-------------|-------------|---------|
+  | ANY         | ANY         | Success |
+  | ANY         | example.com | Success |
+  | example.com | ANY         | Fail    |
+  | example.com | example.com | Success |
+  | notwork.com | example.com | Fail    |
 
 * *jti* (JWT ID): The interpretation for `jti` is unchanged from the RFC. It is a unique identifier that protects against replay attacks, improves traceability of tokens through a distributed system, and enables revocation.  The `jti` claim is OPTIONAL.
 
@@ -148,11 +156,10 @@ To stageout to `/store/user/bbockelm`, a part of the CMS namespace at the CMS si
 {
    "scope": "write:/store/user/bbockelm",
    "iss":   "https://cms.cern/oauth",
-   "site":  "T2_US_Nebraska"
 }
 ```
 
-The implementation of `site` is purposely ambiguous; hence, the `aud` claim must be used to restrict a token to a specific endpoint:
+The `aud` claim must be used to restrict a token to a specific endpoint:
 
 ```
 {
