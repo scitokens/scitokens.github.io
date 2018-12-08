@@ -23,11 +23,13 @@ As a SciToken is a [JSON Web Token](https://jwt.io) at its base, we inherit a sp
 
   | Client      | Server      | Result  |
   |-------------|-------------|---------|
-  | ANY         | ANY         | Success |
+  | ANY         | ANY         | Error   |
   | ANY         | example.com | Success |
-  | example.com | ANY         | Fail    |
+  | example.com | ANY         | Error   |
   | example.com | example.com | Success |
   | notwork.com | example.com | Fail    |
+
+  The server cannot apply `ANY`, as that is invalid.
 
 * *jti* (JWT ID): The interpretation for `jti` is unchanged from the RFC. It is a unique identifier that protects against replay attacks, improves traceability of tokens through a distributed system, and enables revocation.  The `jti` claim is OPTIONAL.
 
