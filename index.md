@@ -2,25 +2,50 @@
 layout: default
 ---
 
-Overview
-========
-
 The SciTokens project is building a federated ecosystem for authorization on distributed scientific computing infrastructures.
 
-We believe that distributed, scientific computing community has unique authorization needs that can be met by utilizing common web technologies, such as OAuth 2.0 and JSON Web Tokens (JWT).  The SciTokens team, a collaboration between technology providers and domain scientists, is working to build and demonstrate a new authorization approach at scale.
+What's New?
+-----------
+
+* January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
+
+Email Lists
+-----------
+
+For SciTokens project updates and discussions, join our email lists:
+
+*   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
+*   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))
+
+Upcoming Events
+---------------
+
+Meet the [SciTokens Team](team) at the following upcoming events:
+
+* March 18-22: [OSG All-Hands Meeting](https://opensciencegrid.org/all-hands/2019/)
+* May 20-23: [HTCondor Week](https://agenda.hep.wisc.edu/event/1325/)
+* July 28 - August 1: [PEARC19](https://www.pearc19.pearc.org/)
+
+SciTokens Code
+--------------
+
+* Libraries: [Python](https://github.com/scitokens/scitokens) [C++](https://github.com/scitokens/scitokens-cpp)
+* Integrations: [CVMFS](https://github.com/scitokens/cvmfs-scitokens-helper) [NGINX](https://github.com/scitokens/nginx-scitokens) [XRootD](https://github.com/scitokens/xrootd-scitokens)
+* [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
+* [Token Server](https://github.com/scitokens/scitokens-java)
+
+
+The SciTokens Mission
+---------------------
+
+We believe that distributed, scientific computing community has unique authorization needs that can be met by utilizing common web technologies, such as [OAuth 2.0](https://tools.ietf.org/html/rfc6749) and [JSON Web Tokens](https://tools.ietf.org/html/rfc7519).  The [SciTokens Team](team), a collaboration between technology providers and domain scientists, is working to build and demonstrate a new authorization approach at scale.
 
 In distributed computing, a natural unit of organization is the "virtual organization" (VO), typically a group or community representing a science domain or experiment that might span several physical institutions (such as a university of lab).  The VO has its own mechanisms to determine membership and access policies for resources it owns.  SciTokens aims to provide an infrastructure that allows the VO to issue bearer tokens that focus on the _capabilities_ the bearer should have within the VO's namespace, as opposed to the _identity_ of the bearer.  This frees resource providers from needing to duplicate VO authorization policies based on identity mapping.
 
-News
-----
-
-* July 25 2018: [SciTokens presentation at PEARC18](https://pearc18.conference-program.com/?page_id=10&id=pap190&sess=sess151)
-* May 22 2018: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1201/other-view)
-
-SciTokens Architecture
+The SciTokens Model
 ----------------------
 
-The SciTokens project is developing a data access architecture for use with LIGO and LSST workflows.  The architecture is shown below:
+The SciTokens project is developing a data access architecture for use with [LIGO](https://ligo.org/) and [LSST](https://www.lsst.org/) workflows.  The architecture is shown below:
 
 ![SciTokens data architecture](img/SciTokens-Model-2.png)
 
@@ -43,13 +68,12 @@ References
 Technical Documents
 -------------------
 
-The SciTokens project is defining the token format and validation/verification rules for utilizing SciTokens, building heavily on top of the OAuth2 framework.
-
 The following is a list of technical documents pertaining to the SciTokens approach:
 
 *   [SciTokens Claims Language](technical_docs/Claims): specifics on the formatting and contents of the tokens.
 *   [Verification Procedure](technical_docs/Verification): how to verify and validate a token.
 *   [SciTokens Library Reference](scitokens): Auto-generated reference documentation for the SciTokens python library.
+*   [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b): description on how SciTokens was setup at Syracuse.
 
 Demonstrations and Presentations
 --------------------------------
@@ -64,9 +88,3 @@ Demonstrations and Presentations
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
 
-# [](#header-1)Email Lists
-
-As SciTokens ramps up, we will post draft technical documents describing the overall architecture, the token format, and the runtime environment.  In the meantime, feel free to subscribe to one of our project email lists:
-
-*   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
-*   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))

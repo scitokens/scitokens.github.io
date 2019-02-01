@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
 title: SciTokens
-description: Federated Authorization Ecosystem for Distributed Scientific Computing
+description: Federated Authorization for Distributed Scientific Computing
 include: .well-known favicon.ico favicon-16x16.png favicon-32x32.png
+github.repository_url: https://github.com/scitokens
