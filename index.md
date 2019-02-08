@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* February 2019: [Setting up the SciTokens Credential Monitor for HTCondor](https://github.com/htcondor/scitokens-credmon/blob/f731fe1e876a682a4071fb0a0b89efe45c94a586/README.md)
 * January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
 
 Email Lists
@@ -74,6 +75,7 @@ The following is a list of technical documents pertaining to the SciTokens appro
 *   [Verification Procedure](technical_docs/Verification): how to verify and validate a token.
 *   [SciTokens Library Reference](scitokens): Auto-generated reference documentation for the SciTokens python library.
 *   [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b): description on how SciTokens was setup at Syracuse.
+*   [Setting up the SciTokens Credential Monitor for HTCondor](https://github.com/htcondor/scitokens-credmon/blob/f731fe1e876a682a4071fb0a0b89efe45c94a586/README.md)
 
 Demonstrations and Presentations
 --------------------------------
