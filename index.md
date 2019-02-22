@@ -7,7 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
-* February 2019: [Setting up the SciTokens Credential Monitor for HTCondor](https://github.com/htcondor/scitokens-credmon/blob/f731fe1e876a682a4071fb0a0b89efe45c94a586/README.md)
+* February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
 * January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
 
 Email Lists
