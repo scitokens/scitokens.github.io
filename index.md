@@ -7,9 +7,10 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
-* March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
-* February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
 * January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
+* February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
+* March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
+* April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
 
 Email Lists
 -----------
@@ -24,7 +25,6 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* March 18-22: [OSG All-Hands Meeting](https://opensciencegrid.org/all-hands/2019/)
 * May 20-23: [HTCondor Week](https://agenda.hep.wisc.edu/event/1325/)
 * July 28 - August 1: [PEARC19](https://www.pearc19.pearc.org/)
 
