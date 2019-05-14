@@ -11,6 +11,7 @@ What's New?
 * February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
 * March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
 * April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
+* May 2019: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17)
 
 Email Lists
 -----------
@@ -88,6 +89,7 @@ Demonstrations and Presentations
 *   [Bootstrapping a (New?) LHC Data Transfer Ecosystem](presentations/DataEcosystem-CHEP18.pdf).  An overview of how LHC could transform its data transfer ecosystem, including the use of SciTokens.  Given by Brian Bockelman in July 2018.
 *   [Capability-Based Authorization for HEP](presentations/SciTokens-CHEP2018.pdf).  An outline of how capability-based authorization would benefit the High Energy Physics community.  Given by Brian Bockelman in July 2018.
 *   [SciTokens at PEARC18](presentations/SciTokens-PEARC18.pdf). Presented by Jim Basney at [PEARC18](https://www.pearc18.pearc.org/) on July 25 2018.
+*   [SciTokens at HTCondor Week 2019](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17). Presented by Zach Miller.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
 
