@@ -27,8 +27,12 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* May 20-23: [HTCondor Week](https://agenda.hep.wisc.edu/event/1325/)
 * July 28 - August 1: [PEARC19](https://www.pearc19.pearc.org/)
+* August 13-15: [InCommon BaseCAMP](https://meetings.internet2.edu/2019-basecamp/)
+* September 23-25: [2019 NSF Campus Cyberinfrastructure and Cybersecurity Innovation for Cyberinfrastructure PI Workshop](https://www.thequilt.net/public-event/2019-nsf-campus-cyberinfrastructure-and-cybersecurity-innovation-for-cyberinfrastructure-pi-workshop/)
+* October 15-17: [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit)
+* November 18-21: [SC19](https://sc19.supercomputing.org/)
+* December 9-12: [Internet2 Technology Exchange](https://meetings.internet2.edu/2019-technology-exchange/)
 
 SciTokens Code
 --------------
