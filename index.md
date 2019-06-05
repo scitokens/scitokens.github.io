@@ -12,6 +12,7 @@ What's New?
 * March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
 * April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
 * May 2019: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17)
+* June 2019: [HTCondor 8.9.2 released](https://htcondor.readthedocs.io/en/v8_9_2/version-history/development-release-series-89.html#version-8-9-2) with support for authentication using SciTokens
 
 Email Lists
 -----------
