@@ -14,6 +14,7 @@ What's New?
 * May 2019: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17)
 * June 2019: [HTCondor 8.9.2 released](https://htcondor.readthedocs.io/en/v8_9_2/version-history/development-release-series-89.html#version-8-9-2) with support for authentication using SciTokens
 * July 2019: [SciTokens at PEARC19](https://groups.google.com/a/scitokens.org/forum/#!topic/announce/ZmP71C1a-8k)
+* September 2019: SciTokens at [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/) and [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
 
 Email Lists
 -----------
@@ -28,9 +29,10 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* July 28 - August 1: [PEARC19](https://www.pearc19.pearc.org/)
-* August 13-15: [InCommon BaseCAMP](https://meetings.internet2.edu/2019-basecamp/)
+* September 10: [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/)
+* September 12: [FIM4R at FNAL](https://indico.cern.ch/event/834658/)
 * September 23-25: [2019 NSF Campus Cyberinfrastructure and Cybersecurity Innovation for Cyberinfrastructure PI Workshop](https://www.thequilt.net/public-event/2019-nsf-campus-cyberinfrastructure-and-cybersecurity-innovation-for-cyberinfrastructure-pi-workshop/)
+* September 24-27: [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
 * October 15-17: [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit)
 * November 18-21: [SC19](https://sc19.supercomputing.org/)
 * December 9-12: [Internet2 Technology Exchange](https://meetings.internet2.edu/2019-technology-exchange/)
