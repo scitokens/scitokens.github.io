@@ -29,8 +29,6 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* September 10: [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/)
-* September 12: [FIM4R at FNAL](https://indico.cern.ch/event/834658/)
 * September 23-25: [2019 NSF Campus Cyberinfrastructure and Cybersecurity Innovation for Cyberinfrastructure PI Workshop](https://www.thequilt.net/public-event/2019-nsf-campus-cyberinfrastructure-and-cybersecurity-innovation-for-cyberinfrastructure-pi-workshop/)
 * September 24-27: [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
 * October 15-17: [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit)
@@ -74,6 +72,7 @@ References
 ----------
 
 * Alex Withers, Brian Bockelman, Derek Weitzel, Duncan Brown, Jason Patton, Jeff Gaynor, Jim Basney, Todd Tannenbaum, You Alex Gao, and Zach Miller. 2019. SciTokens: Demonstrating Capability-Based Access to Remote Scientific Data using HTCondor. In Practice and Experience in Advanced Research Computing (PEARC '19), July 28-August 1, 2019, Chicago, IL, USA. ACM, New York, NY, USA, 4 pages. [https://doi.org/10.1145/3332186.3333258](https://doi.org/10.1145/3332186.3333258) (preprint: [https://arxiv.org/abs/1905.09816](https://arxiv.org/abs/1905.09816))
+* Derek Weitzel, Brian Bockelman, Jim Basney, Todd Tannenbaum, Zach Miller, and Jeff Gaynor. Capability-Based Authorization for HEP. In 23rd International Conference on Computing in High Energy and Nuclear Physics (CHEP 2018), July 9-13, 2018, Sofia, Bulgaria. [https://doi.org/10.1051/epjconf/201921404014](https://doi.org/10.1051/epjconf/201921404014)
 * Alex Withers, Brian Bockelman, Derek Weitzel, Duncan A. Brown, Jeff Gaynor, Jim Basney, Todd Tannenbaum, Zach Miller, "SciTokens: Capability-Based Secure Access to Remote Scientific Data", PEARC '18: Practice and Experience in Advanced Research Computing, July 2018, Pittsburgh, PA, USA. [https://doi.org/10.1145/3219104.3219135](https://doi.org/10.1145/3219104.3219135) (preprint: [https://arxiv.org/abs/1807.04728](https://arxiv.org/abs/1807.04728))
 * [SciTokens Project Proposal](scitokens-proposal-public.pdf)
 
@@ -99,6 +98,7 @@ Demonstrations and Presentations
 *   [Capability-Based Authorization for HEP](presentations/SciTokens-CHEP2018.pdf).  An outline of how capability-based authorization would benefit the High Energy Physics community.  Given by Brian Bockelman in July 2018.
 *   [SciTokens at PEARC18](presentations/SciTokens-PEARC18.pdf). Presented by Jim Basney at [PEARC18](https://www.pearc18.pearc.org/) on July 25 2018.
 *   [SciTokens at HTCondor Week 2019](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17). Presented by Zach Miller.
+*   [SciTokens and IAM Interoperability](https://indico.cern.ch/event/739896/#10-scitokens-and-iam-interoper). Presented by Brian Bockelman at the pre-GDB - AuthZ WG - at FermiLab on September 10, 2019.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
 
