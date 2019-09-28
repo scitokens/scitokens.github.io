@@ -15,6 +15,7 @@ What's New?
 * June 2019: [HTCondor 8.9.2 released](https://htcondor.readthedocs.io/en/v8_9_2/version-history/development-release-series-89.html#version-8-9-2) with support for authentication using SciTokens
 * July 2019: [SciTokens at PEARC19](https://groups.google.com/a/scitokens.org/forum/#!topic/announce/ZmP71C1a-8k)
 * September 2019: SciTokens at [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/) and [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
+* September 2019: [WLCG Common JWT Profiles](https://doi.org/10.5281/zenodo.3460258) is published
 
 Email Lists
 -----------
@@ -29,8 +30,6 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* September 23-25: [2019 NSF Campus Cyberinfrastructure and Cybersecurity Innovation for Cyberinfrastructure PI Workshop](https://www.thequilt.net/public-event/2019-nsf-campus-cyberinfrastructure-and-cybersecurity-innovation-for-cyberinfrastructure-pi-workshop/)
-* September 24-27: [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
 * October 15-17: [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit)
 * November 18-21: [SC19](https://sc19.supercomputing.org/)
 * December 9-12: [Internet2 Technology Exchange](https://meetings.internet2.edu/2019-technology-exchange/)
@@ -71,6 +70,7 @@ The project is bringing these concepts into a functioning infrastructure for its
 References
 ----------
 
+*  Altunay, Mine; Bockelman, Brian; Ceccanti, Andrea; Cornwall, Linda; Crawford, Matt; Crooks, David; Dack, Thomas; Dykstra, David; Groep, David; Igoumenos, Ioannis; Jouvin, Michel; Keeble, Oliver; Kelsy, David; Lassnig, Mario; Liampotis, Nicolas; Litmaath, Maarten; McNab, Andrew; Millar, Paul; Sallé, Mischa; Short, Hannah; Teheran, Jeny; Wartel, Romain. WLCG Common JWT Profiles (Version 1.0). Zenodo. September 25, 2019. [https://doi.org/10.5281/zenodo.3460258](https://doi.org/10.5281/zenodo.3460258)
 * Alex Withers, Brian Bockelman, Derek Weitzel, Duncan Brown, Jason Patton, Jeff Gaynor, Jim Basney, Todd Tannenbaum, You Alex Gao, and Zach Miller. 2019. SciTokens: Demonstrating Capability-Based Access to Remote Scientific Data using HTCondor. In Practice and Experience in Advanced Research Computing (PEARC '19), July 28-August 1, 2019, Chicago, IL, USA. ACM, New York, NY, USA, 4 pages. [https://doi.org/10.1145/3332186.3333258](https://doi.org/10.1145/3332186.3333258) (preprint: [https://arxiv.org/abs/1905.09816](https://arxiv.org/abs/1905.09816))
 * Derek Weitzel, Brian Bockelman, Jim Basney, Todd Tannenbaum, Zach Miller, and Jeff Gaynor. Capability-Based Authorization for HEP. In 23rd International Conference on Computing in High Energy and Nuclear Physics (CHEP 2018), July 9-13, 2018, Sofia, Bulgaria. [https://doi.org/10.1051/epjconf/201921404014](https://doi.org/10.1051/epjconf/201921404014)
 * Alex Withers, Brian Bockelman, Derek Weitzel, Duncan A. Brown, Jeff Gaynor, Jim Basney, Todd Tannenbaum, Zach Miller, "SciTokens: Capability-Based Secure Access to Remote Scientific Data", PEARC '18: Practice and Experience in Advanced Research Computing, July 2018, Pittsburgh, PA, USA. [https://doi.org/10.1145/3219104.3219135](https://doi.org/10.1145/3219104.3219135) (preprint: [https://arxiv.org/abs/1807.04728](https://arxiv.org/abs/1807.04728))
