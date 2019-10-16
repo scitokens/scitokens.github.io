@@ -16,6 +16,7 @@ What's New?
 * July 2019: [SciTokens at PEARC19](https://groups.google.com/a/scitokens.org/forum/#!topic/announce/ZmP71C1a-8k)
 * September 2019: SciTokens at [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/) and [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
 * September 2019: [WLCG Common JWT Profiles](https://doi.org/10.5281/zenodo.3460258) is published
+* October 2019: SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf)
 
 Email Lists
 -----------
@@ -30,7 +31,6 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* October 15-17: [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit)
 * November 18-21: [SC19](https://sc19.supercomputing.org/)
 * December 9-12: [Internet2 Technology Exchange](https://meetings.internet2.edu/2019-technology-exchange/)
 
@@ -98,6 +98,7 @@ Demonstrations and Presentations
 *   [Capability-Based Authorization for HEP](presentations/SciTokens-CHEP2018.pdf).  An outline of how capability-based authorization would benefit the High Energy Physics community.  Given by Brian Bockelman in July 2018.
 *   [SciTokens at PEARC18](presentations/SciTokens-PEARC18.pdf). Presented by Jim Basney at [PEARC18](https://www.pearc18.pearc.org/) on July 25 2018.
 *   [SciTokens at HTCondor Week 2019](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17). Presented by Zach Miller.
+*   SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf) presented by Alex Withers and Derek Weitzel
 *   [SciTokens and IAM Interoperability](https://indico.cern.ch/event/739896/#10-scitokens-and-iam-interoper). Presented by Brian Bockelman at the pre-GDB - AuthZ WG - at FermiLab on September 10, 2019.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
