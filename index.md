@@ -7,6 +7,8 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* November 2019: The [Insomnia REST Client](https://insomnia.rest/) has been patched so that it can [obtain SciTokens](https://github.com/getinsomnia/insomnia/pull/1768) for authorization.
+* October 2019: Docker containers are available for testing the [Java SciTokens Server/Client](https://github.com/scitokens/docker-scitokens-java) and the [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
 * January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
 * February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
 * March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
