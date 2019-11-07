@@ -29,6 +29,7 @@ docker run -it --rm \
   -e URLS_SELF_ISSUER=http://127.0.0.1:9000/ \
   -e URLS_CONSENT=http://127.0.0.1:9020/consent \
   -e URLS_LOGIN=http://127.0.0.1:9020/login \
+  -e OAUTH2_ACCESS_TOKEN_STRATEGY=jwt\
   oryd/hydra:v1.0.8 serve all --dangerous-force-http
 
 docker run --rm -it \
@@ -66,4 +67,8 @@ docker run --rm -it \
     --redirect http://127.0.0.1:9010/callback
  ```
  
- http://127.0.0.1:9000/.well-known/openid-configuration
+http://127.0.0.1:9000/.well-known/openid-configuration
+
+https://github.com/ory/hydra/issues/248
+
+https://github.com/ory/hydra/pull/947
