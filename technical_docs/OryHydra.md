@@ -4,6 +4,13 @@
 
 This documents assumes that the reader is familar with OAuth2 and [Hydra](https://www.ory.sh/docs/hydra/). The document [Run your own OAuth2 Server](https://www.ory.sh/run-oauth2-server-open-source-api-security/) provides a good introduction to these topics. More details on SciTokens can be found on the [SciTokens](https://scitokens.org) web pages.
 
+This tutorial shows how to set up the server and create an OAuth2 client in the server's database. In order for clients to be able to use [SciTokens](https://scitokens.org), we need to configure the `--audience` and `--scope` for the tokens that will be issues to the client. This can be done in two ways: 
+
+ * Using the [command line tool used in the tutorial](https://www.ory.sh/docs/hydra/5min-tutorial)
+ * Directly using the [REST API.](https://www.ory.sh/docs/hydra/sdk/api#create-an-oauth-20-client)
+
+We give examples of both methods below.
+
 ## Setting up the Server Containers
 
 Note that this tutorial is meant to illustrate the principles of setup, it is not suitable for production as it uses http endpoints on an internal network that are not protected by encryption.
@@ -80,25 +87,16 @@ time="2019-11-12T16:22:40Z" level=warning msg="HTTPS disabled. Never do this in 
 time="2019-11-12T16:22:40Z" level=warning msg="HTTPS disabled. Never do this in production."
 ```
 
-Once this message is displayed, you can go to server's [.well-known/openid-configuration](http://127.0.0.1:9000/.well-known/openid-configuration) to see the `authorization_endpoint` and `token_endpoint`. 
+Once this message is displayed, you can go to server's [.well-known/openid-configuration](http://127.0.0.1:9000/.well-known/openid-configuration) to see the `authorization_endpoint` and `token_endpoint` and [.well-known/jwks.json](http://127.0.0.1:9000/.well-known/jwks.json) to see the keys for the tokens.
 
-## Create an OAuth2 Client
+For more information on interacting with the Hydra server, see the [documentation for the REST API.](https://www.ory.sh/docs/hydra/sdk/api)
 
-The next step is to create an OAuth2 client in the server's database. In order for the client to request [SciTokens](https://scitokens.org), we need to configure the `--audience` and `--scope` for the tokens that will be issues to the client. 
+### Login and Consent Container
 
-docker run --rm -it \
-   --network hydraguide \
-   oryd/hydra:v1.0.8 \
-   clients create \
-     --endpoint http://ory-hydra-example--hydra:4445 \
-     --id scitokens \
-     --secret badgers \
-     -g authorization_code,refresh_token \
-     -r token,code,id_token \
-     --scope offline,openid,read:/public,write:/home/dbrown \
-     --audience sugwg-scitokens.phy.syr.edu \
-     --callbacks http://127.0.0.1:9010/callback
-     
+This tutorial uses an instance of the [Hydra Login and Consent Node](https://github.com/ory/hydra-login-consent-node) running on port 9020 to provide the OIDC and consent parts of the OAuth2 flow. The server as one user with the username `foo@bar.com` and password `foobar`.
+
+Start the server with the command:
+```sh
 docker run -d \
   --name ory-hydra-example--consent \
   -p 9020:3000 \
@@ -106,7 +104,34 @@ docker run -d \
   -e HYDRA_ADMIN_URL=http://ory-hydra-example--hydra:4445 \
   -e NODE_TLS_REJECT_UNAUTHORIZED=0 \
   oryd/hydra-login-consent-node:v1.0.8
-  
+```
+
+## Create and Test OAuth2 Clients
+
+We first create a simple client that can obtain an authorization token using the command line tool, and then a client that can obtain a refresh token using [Insomnia](https://insomnia.rest/) to talk to the [Hydra Admistrative REST API.](https://www.ory.sh/docs/hydra/sdk/api#administrative-endpoints)
+
+### Command Line tool
+
+To create a client using the command line tool, run the command below to talk to the server's administrative endpoint on the Docker internal network (`http://ory-hydra-example--hydra:4445`):
+```sh
+docker run --rm -it \
+   --network hydraguide \
+   oryd/hydra:v1.0.8 \
+   clients create \
+     --endpoint http://ory-hydra-example--hydra:4445 \
+     --id scitokens_cmd \
+     --secret badgers \
+     -g authorization_code \
+     -r code \
+     --scope read:/public,write:/home/dbrown \
+     --audience sugwg-scitokens.phy.syr.edu \
+     --callbacks http://127.0.0.1:9010/callback
+```
+
+This creates an OAuth2 client with the Client ID `scitokens_cmd` and the Client Secret `badgers`. The grant types are set with the `-g` option to be `authorization_code`, as this is the primary grant used to get a [SciTokens.](https://scitokens.org). We set the response types with `-r` to be `code` since we want to perform an [Authorization Code grant.](https://auth0.com/docs/protocols/oauth2#how-response-type-works) In the above examples `--audience` is set to the name of the server where we wish to use the token, and the `--scope` is set to the allowed tokens scopes for the audience.
+
+To obtain a token, run the Hydra token client with the following command:
+```sh
 docker run --rm -it \
   --network hydraguide \
   -p 9010:9010 \
@@ -115,12 +140,48 @@ docker run --rm -it \
     --port 9010 \
     --auth-url http://127.0.0.1:9000/oauth2/auth \
     --token-url http://ory-hydra-example--hydra:4444/oauth2/token \
-    --client-id scitokens \
+    --client-id scitokens_cmd \
     --client-secret badgers \
-    --scope openid,offline \
+    --audience sugwg-scitokens.phy.syr.edu \
+    --scope write:/home/dbrown \
     --redirect http://127.0.0.1:9010/callback
  ```
- 
+
+This will respond with the message below:
+```
+Setting up home route on http://127.0.0.1:9010/
+Setting up callback listener on http://127.0.0.1:9010/callback
+Press ctrl + c on Linux / Windows or cmd + c on OSX to end the process.
+If your browser does not open automatically, navigate to:
+
+	http://127.0.0.1:9010/
+```
+Using a browser, visit the link provided and follow the login and consent flow to login as `foo@bar.com` and authorize the grant. The client will return a token that can be used for authorization, or decrypted by pasting it into the encoded box at [https://demo.scitokens.org/](https://demo.scitokens.org/)
+
+The headers and payload of a token created following the above example will look like this:
+```json
+{
+  "alg": "RS256",
+  "kid": "public:040819c0-9112-4851-aeba-62d868776dbf",
+  "typ": "JWT"
+}
+{
+  "aud": [
+    "sugwg-scitokens.phy.syr.edu"
+  ],
+  "client_id": "scitokens",
+  "exp": 1573582748,
+  "ext": {},
+  "iat": 1573579147,
+  "iss": "http://127.0.0.1:9000/",
+  "jti": "866369a7-cdb4-4328-9661-4abe4c8a59d5",
+  "nbf": 1573579147,
+  "scp": [
+    "read:/public"
+  ],
+  "sub": "foo@bar.com"
+}
+```
 
 
 
