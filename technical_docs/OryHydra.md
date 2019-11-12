@@ -249,8 +249,44 @@ The client created will be similar to the previous example, but we also add the 
 
 To use this client, create a new request to send a `POST` to `http://127.0.0.1:9001/oauth2/introspect` so that we can obtain and introspect a token. Set the request's Auth type to be `OAuth2` and configure the query as shown below. 
 
+<img src="https://github.com/duncan-brown/scitokens.github.io/raw/master/technical_docs/insomnia_ory_example.png" alt="Insomnia OAuth2 Configuration" data-canonical-src="https://github.com/duncan-brown/scitokens.github.io/raw/master/technical_docs/insomnia_ory_example.png" width="400" />
 
+The click `Refresh Token` to obtain refresh and access tokens.
 
+To check the contents of the access token, you can paste it into [https://demo.scitokens.org](https://demo.scitokens.org), which will display a payload similar to the following:
+```json
+{
+  "aud": [
+    "sugwg-scitokens.phy.syr.edu"
+  ],
+  "client_id": "scitokens_rest",
+  "exp": 1573585481,
+  "ext": {},
+  "iat": 1573581880,
+  "iss": "http://127.0.0.1:9000/",
+  "jti": "2dfe35a3-261d-4d31-b111-1a40f623d718",
+  "nbf": 1573581880,
+  "scp": [
+    "read:/public",
+    "offline"
+  ],
+  "sub": "foo@bar.com"
+}
+```
 
-
-
+Alternatively, you can set the Insomnia request body to `Form URL Encoded` and create a field with the name `token` and paste in the access token as the value. Posting this to the introspection endpoint will show
+```json
+{
+  "active": true,
+  "scope": "offline read:/public",
+  "client_id": "scitokens_rest",
+  "sub": "foo@bar.com",
+  "exp": 1573585048,
+  "iat": 1573581447,
+  "aud": [
+    "sugwg-scitokens.phy.syr.edu"
+  ],
+  "iss": "http://127.0.0.1:9000/",
+  "token_type": "access_token"
+}
+```
