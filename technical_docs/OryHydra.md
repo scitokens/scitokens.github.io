@@ -183,5 +183,74 @@ The headers and payload of a token created following the above example will look
 }
 ```
 
+### REST API
+
+Now we will use the [Insomnia REST Client](https://insomnia.rest) to create an OAuth2 client and issue a token. [Create a new request](https://support.insomnia.rest/article/11-getting-started) in Insomnia that will send a `POST` to the server at `http://127.0.0.1:9001/clients` to create a new client. The body of the request should be set to JSON and should contain:
+```json
+{
+  "audience": ["sugwg-scitokens.phy.syr.edu"],
+  "client_id": "scitokens_rest",
+  "client_name": "scitokens_rest",
+  "client_secret": "herecomethebadgers",
+  "client_uri": "https://scitokens.org/",
+  "contacts": ["dabrown@syr.edu"],
+  "grant_types": ["authorization_code", "refresh_token"],
+  "owner": "dabrown@syr.edu",
+  "post_logout_redirect_uris": ["https://scitokens.org/"],
+  "policy_uri": "https://scitokens.org/",
+  "redirect_uris": ["https://scitokens.org", "http://127.0.0.1:9010/callback"],
+  "response_types": ["code"],
+  "scope": "offline read:/public write:/home/dbrown",
+	"token_endpoint_auth_method": "client_secret_basic"
+}
+```
+
+The client created will be similar to the previous example, but we also add the grant type `refresh_token` so that a refresh token can be generated. If the post is successful the server will return `201 Created` and the response will contain the full configuratuon of the client:
+```json
+{
+  "client_id": "scitokens_rest",
+  "client_name": "scitokens_rest",
+  "client_secret": "herecomethebadgers",
+  "redirect_uris": [
+    "https://scitokens.org",
+    "http://127.0.0.1:9010/callback"
+  ],
+  "grant_types": [
+    "authorization_code",
+    "refresh_token"
+  ],
+  "response_types": [
+    "code"
+  ],
+  "scope": "offline read:/public write:/home/dbrown",
+  "audience": [
+    "sugwg-scitokens.phy.syr.edu"
+  ],
+  "owner": "dabrown@syr.edu",
+  "policy_uri": "https://scitokens.org/",
+  "allowed_cors_origins": null,
+  "tos_uri": "",
+  "client_uri": "https://scitokens.org/",
+  "logo_uri": "",
+  "contacts": [
+    "dabrown@syr.edu"
+  ],
+  "client_secret_expires_at": 0,
+  "subject_type": "public",
+  "token_endpoint_auth_method": "client_secret_basic",
+  "userinfo_signed_response_alg": "none",
+  "created_at": "2019-11-12T17:56:50Z",
+  "updated_at": "2019-11-12T17:56:50Z",
+  "post_logout_redirect_uris": [
+    "https://scitokens.org/"
+  ]
+}
+```
+
+To use this client, create a new request to send a `POST` to `http://127.0.0.1:9001/oauth2/introspect` so that we can obtain and introspect a token. Set the request's Auth type to be `OAuth2` and configure the query as shown below. 
+
+
+
+
 
 
