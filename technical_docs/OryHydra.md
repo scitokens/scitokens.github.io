@@ -169,15 +169,15 @@ The headers and payload of a token created following the above example will look
   "aud": [
     "sugwg-scitokens.phy.syr.edu"
   ],
-  "client_id": "scitokens",
-  "exp": 1573582748,
+  "client_id": "scitokens_cmd",
+  "exp": 1573584333,
   "ext": {},
-  "iat": 1573579147,
+  "iat": 1573580733,
   "iss": "http://127.0.0.1:9000/",
-  "jti": "866369a7-cdb4-4328-9661-4abe4c8a59d5",
-  "nbf": 1573579147,
+  "jti": "c74578c9-c213-42ac-80d5-e4ca238490fd",
+  "nbf": 1573580733,
   "scp": [
-    "read:/public"
+    "write:/home/dbrown"
   ],
   "sub": "foo@bar.com"
 }
