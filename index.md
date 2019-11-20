@@ -10,14 +10,14 @@ What's New?
 * November 2019: [HTCondor](https://research.cs.wisc.edu/htcondor/) 8.9.4 and HTCondor-CE 4.0.1 released with SciTokens support.
 * November 2019: The [Insomnia REST Client](https://insomnia.rest/) has been patched so that it can [obtain SciTokens](https://github.com/getinsomnia/insomnia/pull/1768) for authorization.
 * October 2019: Docker containers are available for testing the [Java SciTokens Server/Client](https://github.com/scitokens/docker-scitokens-java) and the [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
-/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
 * October 2019: SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf)
 * September 2019: SciTokens at [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/) and [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
 * September 2019: [WLCG Common JWT Profiles](https://doi.org/10.5281/zenodo.3460258) is published
 * July 2019: [SciTokens at PEARC19](https://groups.google.com/a/scitokens.org/forum/#!topic/announce/ZmP71C1a-8k)
 * June 2019: [HTCondor 8.9.2 released](https://htcondor.readthedocs.io/en/v8_9_2/version-history/development-release-series-89.html#version-8-9-2) with support for authentication using SciTokens
 * May 2019: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17)
-* April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document* March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
+* April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
+* March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
 * February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
 * January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
 
