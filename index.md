@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* November 2019: [HTCondor](https://research.cs.wisc.edu/htcondor/) 8.9.4 and HTCondor-CE 4.0.1 released with SciTokens support.
 * November 2019: The [Insomnia REST Client](https://insomnia.rest/) has been patched so that it can [obtain SciTokens](https://github.com/getinsomnia/insomnia/pull/1768) for authorization.
 * October 2019: Docker containers are available for testing the [Java SciTokens Server/Client](https://github.com/scitokens/docker-scitokens-java) and the [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
 /d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
