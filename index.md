@@ -34,7 +34,6 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* November 18-21: [SC19](https://sc19.supercomputing.org/)
 * December 9-12: [Internet2 Technology Exchange](https://meetings.internet2.edu/2019-technology-exchange/)
 
 SciTokens Code
