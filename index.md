@@ -7,6 +7,8 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
+* January 2020: [SciTokens support contributed to XSEDE OAuth SSH](https://github.com/XSEDE/oauth-ssh/pull/69)
 * November 2019: [Instructions](technical_docs/OryHydra) for configuring the [ORY Hydra OAuth2 Server](https://www.ory.sh/docs/hydra/) to issue SciTokens.
 * November 2019: [HTCondor](https://research.cs.wisc.edu/htcondor/) 8.9.4 and HTCondor-CE 4.0.1 released with SciTokens support.
 * November 2019: The [Insomnia REST Client](https://insomnia.rest/) has been patched so that it can [obtain SciTokens](https://github.com/getinsomnia/insomnia/pull/1768) for authorization.
@@ -35,7 +37,8 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* December 9-12: [Internet2 Technology Exchange](https://meetings.internet2.edu/2019-technology-exchange/)
+* March 29 - April 1: [Internet2 Global Summit](https://meetings.internet2.edu/2020-global-summit/)
+* July 26-30: [PEARC20](https://pearc.acm.org/pearc20/)
 
 SciTokens Code
 --------------
