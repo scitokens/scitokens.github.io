@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/scitokens/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
 * January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
 * January 2020: [SciTokens support contributed to XSEDE OAuth SSH](https://github.com/XSEDE/oauth-ssh/pull/69)
 * November 2019: [Instructions](technical_docs/OryHydra) for configuring the [ORY Hydra OAuth2 Server](https://www.ory.sh/docs/hydra/) to issue SciTokens.
@@ -37,7 +38,7 @@ Upcoming Events
 
 Meet the [SciTokens Team](team) at the following upcoming events:
 
-* March 29 - April 1: [Internet2 Global Summit](https://meetings.internet2.edu/2020-global-summit/)
+* May 19-20: [HTCondor Week](http://htcondor.org/HTCondorWeek2020)
 * July 26-30: [PEARC20](https://pearc.acm.org/pearc20/)
 
 SciTokens Code
@@ -108,4 +109,3 @@ Demonstrations and Presentations
 *   [SciTokens and IAM Interoperability](https://indico.cern.ch/event/739896/#10-scitokens-and-iam-interoper). Presented by Brian Bockelman at the pre-GDB - AuthZ WG - at FermiLab on September 10, 2019.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
-
