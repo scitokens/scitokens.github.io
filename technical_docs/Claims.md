@@ -165,7 +165,7 @@ The `aud` claim must be used to restrict a token to a specific endpoint:
 
 ```
 {
-   "authz": "write:/store/user/bbockelm",
+   "scope": "write:/store/user/bbockelm",
    "iss":   "https://cms.cern/oauth",
    "aud":   "https://transfer.unl.edu"
 }
