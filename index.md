@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
 * March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/scitokens/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
 * January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
 * January 2020: [SciTokens support contributed to XSEDE OAuth SSH](https://github.com/XSEDE/oauth-ssh/pull/69)
@@ -77,6 +78,7 @@ The project is bringing these concepts into a functioning infrastructure for its
 References
 ----------
 
+* You Alex Gao, Jim Basney, and Alex Withers. 2020. SciTokens SSH: Token-based Authentication for Remote Login to Scientific Computing Environments. In Practice and Experience in Advanced Research Computing (PEARC ’20), July 26-30, 2020, Portland, OR, USA. ACM, New York, NY, USA, 7 pages. https://doi.org/10.1145/3311790.3399613
 *  Altunay, Mine; Bockelman, Brian; Ceccanti, Andrea; Cornwall, Linda; Crawford, Matt; Crooks, David; Dack, Thomas; Dykstra, David; Groep, David; Igoumenos, Ioannis; Jouvin, Michel; Keeble, Oliver; Kelsy, David; Lassnig, Mario; Liampotis, Nicolas; Litmaath, Maarten; McNab, Andrew; Millar, Paul; Sallé, Mischa; Short, Hannah; Teheran, Jeny; Wartel, Romain. WLCG Common JWT Profiles (Version 1.0). Zenodo. September 25, 2019. [https://doi.org/10.5281/zenodo.3460258](https://doi.org/10.5281/zenodo.3460258)
 * Alex Withers, Brian Bockelman, Derek Weitzel, Duncan Brown, Jason Patton, Jeff Gaynor, Jim Basney, Todd Tannenbaum, You Alex Gao, and Zach Miller. 2019. SciTokens: Demonstrating Capability-Based Access to Remote Scientific Data using HTCondor. In Practice and Experience in Advanced Research Computing (PEARC '19), July 28-August 1, 2019, Chicago, IL, USA. ACM, New York, NY, USA, 4 pages. [https://doi.org/10.1145/3332186.3333258](https://doi.org/10.1145/3332186.3333258) (preprint: [https://arxiv.org/abs/1905.09816](https://arxiv.org/abs/1905.09816))
 * Derek Weitzel, Brian Bockelman, Jim Basney, Todd Tannenbaum, Zach Miller, and Jeff Gaynor. Capability-Based Authorization for HEP. In 23rd International Conference on Computing in High Energy and Nuclear Physics (CHEP 2018), July 9-13, 2018, Sofia, Bulgaria. [https://doi.org/10.1051/epjconf/201921404014](https://doi.org/10.1051/epjconf/201921404014)
