@@ -7,7 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
-* July 2020: [SciTokens SSH](https://doi.org/10.1145/3311790.3399613) student poster paper presented at [PEARC20](https://pearc.acm.org/pearc20/)
+* July 2020: SciTokens SSH student [poster](presentations/SciTokens-SSH-PEARC20-Poster.pdf) [paper](https://doi.org/10.1145/3311790.3399613) presented at [PEARC20](https://pearc.acm.org/pearc20/)
 * May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
 * March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/scitokens/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
 * January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
