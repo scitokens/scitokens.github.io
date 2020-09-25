@@ -103,5 +103,6 @@ Demonstrations and Presentations
 *   [SciTokens at HTCondor Week 2019](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17). Presented by Zach Miller.
 *   SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf) presented by Alex Withers and Derek Weitzel
 *   [SciTokens and IAM Interoperability](https://indico.cern.ch/event/739896/#10-scitokens-and-iam-interoper). Presented by Brian Bockelman at the pre-GDB - AuthZ WG - at FermiLab on September 10, 2019.
+* [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
