@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* September 2020: [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
 * July 2020: SciTokens SSH student [poster](presentations/SciTokens-SSH-PEARC20-Poster.pdf) [paper](https://doi.org/10.1145/3311790.3399613) presented at [PEARC20](https://pearc.acm.org/pearc20/)
 * May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
 * March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/scitokens/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
@@ -35,14 +36,6 @@ For SciTokens project updates and discussions, join our email lists:
 *   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
 *   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))
 
-Upcoming Events
----------------
-
-Meet the [SciTokens Team](team) at the following upcoming events:
-
-* May 19-20: [HTCondor Week](http://htcondor.org/HTCondorWeek2020)
-* July 26-30: [PEARC20](https://pearc.acm.org/pearc20/)
-
 SciTokens Code
 --------------
 
@@ -50,7 +43,7 @@ SciTokens Code
 * Integrations: [CVMFS](https://github.com/scitokens/cvmfs-scitokens-helper) [NGINX](https://github.com/scitokens/nginx-scitokens) [XRootD](https://github.com/scitokens/xrootd-scitokens)
 * [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
 * [Token Server](https://github.com/scitokens/scitokens-java)
-
+* [SciTokens SSH](https://github.com/XSEDE/oauth-ssh/tree/master/server#scitokens)
 
 The SciTokens Mission
 ---------------------
