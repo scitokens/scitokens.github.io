@@ -7,6 +7,9 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* January 2021: [SciTokens at Trusted CI Webinar](https://www.trustedci.org/webinars)
+* December 2020: [SciTokens at TAGPMA Workshop on Token-Based Authentication and Authorization](https://indico.rnp.br/event/33/)
+* November 2020: [HTCondor 8.9.10](https://htcondor.readthedocs.io/en/latest/version-history/development-release-series-89.html#version-8-9-10) added support for OAuth, SciTokens, and Kerberos credentials in local universe jobs.
 * September 2020: [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
 * July 2020: SciTokens SSH student [poster](presentations/SciTokens-SSH-PEARC20-Poster.pdf) [paper](https://doi.org/10.1145/3311790.3399613) presented at [PEARC20](https://pearc.acm.org/pearc20/)
 * May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
