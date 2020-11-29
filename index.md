@@ -38,6 +38,8 @@ For SciTokens project updates and discussions, join our email lists:
 
 *   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
 *   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))
+*   ligo-discuss@scitokens.org ([subscribe](mailto:ligo-discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/ligo-discuss))
+
 
 SciTokens Code
 --------------
