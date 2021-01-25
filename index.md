@@ -7,7 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
-* January 2021: [SciTokens at Trusted CI Webinar](https://www.trustedci.org/webinars)
+* January 2021: [SciTokens at Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
 * December 2020: [SciTokens at TAGPMA Workshop on Token-Based Authentication and Authorization](https://indico.rnp.br/event/33/)
 * November 2020: [HTCondor 8.9.10](https://htcondor.readthedocs.io/en/latest/version-history/development-release-series-89.html#version-8-9-10) added support for OAuth, SciTokens, and Kerberos credentials in local universe jobs.
 * September 2020: [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
@@ -109,5 +109,6 @@ Demonstrations and Presentations
 *   SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf) presented by Alex Withers and Derek Weitzel
 *   [SciTokens and IAM Interoperability](https://indico.cern.ch/event/739896/#10-scitokens-and-iam-interoper). Presented by Brian Bockelman at the pre-GDB - AuthZ WG - at FermiLab on September 10, 2019.
 * [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
+* [SciTokens at January 2021 Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
