@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* March 2021: [Evolving the OSG Fabric of Services](https://indico.fnal.gov/event/47040/sessions/17920/) at the [OSG All Hands Meeting](https://opensciencegrid.org/all-hands/2021/)
 * January 2021: [SciTokens at Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
 * December 2020: [SciTokens at TAGPMA Workshop on Token-Based Authentication and Authorization](https://indico.rnp.br/event/33/)
 * November 2020: [HTCondor 8.9.10](https://htcondor.readthedocs.io/en/latest/version-history/development-release-series-89.html#version-8-9-10) added support for OAuth, SciTokens, and Kerberos credentials in local universe jobs.
@@ -110,5 +111,6 @@ Demonstrations and Presentations
 *   [SciTokens and IAM Interoperability](https://indico.cern.ch/event/739896/#10-scitokens-and-iam-interoper). Presented by Brian Bockelman at the pre-GDB - AuthZ WG - at FermiLab on September 10, 2019.
 * [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
 * [SciTokens at January 2021 Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
+* [Evolving the OSG Fabric of Services](https://indico.fnal.gov/event/47040/sessions/17920/) at the [2021 OSG All Hands Meeting](https://opensciencegrid.org/all-hands/2021/)
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
