@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* June 2021: [WLCG CE & Factory Token Hackathon](https://indico.cern.ch/event/1032742/)
 * May 2021: SciTokens at [HTCondor Week](https://agenda.hep.wisc.edu/event/1579/)
 * April 2021: [HTCondor 9.0.0 Released](https://www-auth.cs.wisc.edu/lists/htcondor-world/2021/msg00006.shtml) with support for IDTOKEN authentication and support for jobs that need to acquire and use OAUTH tokens
 * March 2021: [Evolving the OSG Fabric of Services](https://indico.fnal.gov/event/47040/sessions/17920/) at the [OSG All Hands Meeting](https://opensciencegrid.org/all-hands/2021/)
