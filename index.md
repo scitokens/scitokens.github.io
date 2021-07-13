@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* July 2021: [SciAuth](https://sciauth.org/) project start. [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman.
 * June 2021: [WLCG CE & Factory Token Hackathon](https://indico.cern.ch/event/1032742/)
 * May 2021: SciTokens at [HTCondor Week](https://agenda.hep.wisc.edu/event/1579/)
 * April 2021: [HTCondor 9.0.0 Released](https://www-auth.cs.wisc.edu/lists/htcondor-world/2021/msg00006.shtml) with support for IDTOKEN authentication and support for jobs that need to acquire and use OAUTH tokens
@@ -115,5 +116,6 @@ Demonstrations and Presentations
 * [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
 * [SciTokens at January 2021 Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
 * [Evolving the OSG Fabric of Services](https://indico.fnal.gov/event/47040/sessions/17920/) at the [2021 OSG All Hands Meeting](https://opensciencegrid.org/all-hands/2021/)
+* [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. July 26 2021.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
