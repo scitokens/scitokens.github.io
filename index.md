@@ -7,7 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
-* July 2021: [SciAuth](https://sciauth.org/) project start. [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman.
+* July 2021: [SciAuth](https://sciauth.org/) project start. [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. HTCondor 8.8.14, 9.0.3, and 9.1.1 releases address [HTCONDOR-2021-0004](https://research.cs.wisc.edu/htcondor/security/vulnerabilities/HTCONDOR-2021-0004.html) vulnerability with processing SciTokens.
 * June 2021: [WLCG CE & Factory Token Hackathon](https://indico.cern.ch/event/1032742/)
 * May 2021: SciTokens at [HTCondor Week](https://agenda.hep.wisc.edu/event/1579/)
 * April 2021: [HTCondor 9.0.0 Released](https://www-auth.cs.wisc.edu/lists/htcondor-world/2021/msg00006.shtml) with support for IDTOKEN authentication and support for jobs that need to acquire and use OAUTH tokens
