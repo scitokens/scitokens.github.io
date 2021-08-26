@@ -7,6 +7,7 @@ The SciTokens project is building a federated ecosystem for authorization on dis
 What's New?
 -----------
 
+* August 2021: [Token Pilot Infrastructure Integration Hackathon](https://indico.fnal.gov/event/50700/)
 * July 2021: [SciAuth](https://sciauth.org/) project start. 
 * July 2021: [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. 
 * July 2021: HTCondor 8.8.14, 9.0.3, and 9.1.1 releases address [HTCONDOR-2021-0004](https://research.cs.wisc.edu/htcondor/security/vulnerabilities/HTCONDOR-2021-0004.html) vulnerability with processing SciTokens.
