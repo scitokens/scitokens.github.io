@@ -20,7 +20,7 @@ Locating a SciToken
 
 In addition to web services, An important use case for SciTokens is POSIX-like command line and batch system environments.  Hence, we believe it is important to have an unambiguous way for a POSIX process to locate a SciToken it should use for authorization with SciToken-aware services.
 
-Locating a token follows the WLCG's Token Discovery proposal (copied here):
+Locating a token follows the WLCG's Token Discovery proposal [10.5281/zenodo.3937438](https://doi.org/10.5281/zenodo.3937438) (copied here):
 
 If a tool needs to authenticate with a token and does not have out-of-band WLCG Bearer Token Discovery knowledge on which token to use, the following steps to discover a token MUST be taken in sequence (where ``$ID`` below is taken as the process’s effective user ID):
 
