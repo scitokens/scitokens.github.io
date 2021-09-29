@@ -20,11 +20,19 @@ Locating a SciToken
 
 In addition to web services, An important use case for SciTokens is POSIX-like command line and batch system environments.  Hence, we believe it is important to have an unambiguous way for a POSIX process to locate a SciToken it should use for authorization with SciToken-aware services.
 
-Unless a token is explicitly specified by the end-user, SciToken client libraries should search the following locations for a SciToken file:
-* `SCITOKEN` environment variable.
-* On a POSIX-like platform, `/tmp/scitoken_u$ID`, where `$ID` is replaced by the POIX user ID.
+Locating a token follows the WLCG's Token Discovery proposal [10.5281/zenodo.3937438](https://doi.org/10.5281/zenodo.3937438) (copied here):
 
-On POSIX-like platforms, the file must be owned by the effective UID.  The file is parsed in a line-oriented form; each non-empty line *not* starting with `#` is to be parsed as a base64-encoded SciTokens.  The client library should determine which token is to be used for each authorization.  (Author note: we should provide guidance on how to determine the most restrictive potentially-valid token available.)
+If a tool needs to authenticate with a token and does not have out-of-band WLCG Bearer Token Discovery knowledge on which token to use, the following steps to discover a token MUST be taken in sequence (where ``$ID`` below is taken as the process’s effective user ID):
+
+1. If the ``BEARER_TOKEN`` environment variable is set, then the value is taken to be the token contents.
+
+2. If the ``BEARER_TOKEN_FILE`` environment variable is set, then its value is interpreted as a filename.  The contents of the specified file are taken to be the token contents.
+
+3. If the ``XDG_RUNTIME_DIR`` environment variable is set, then take the token from the contents of ``$XDG_RUNTIME_DIR/bt_u$ID``.
+
+4. Otherwise, take the token from ``/tmp/bt_u$ID``.
+
+If a potential token is found at a step, then the discovery implementation MUST strip all whitespace on the left and right sides of the string (we define whitespace the same way as the C99 ``isspace`` function: space, form-feed (``\f``), newline (``\n``), carriage return (``\r``), horizontal tab (``\t``), and vertical tab (``\v``).  Upon finding a valid token according to section 2.1 of RFC6750, the discovery procedure MUST terminate and return this token.  Upon finding an empty token, the discovery implementation should continue with the next step.  Upon finding an invalid token, the implementation SHOULD stop and return an error.  
 
 This document does not cover how a new SciToken might be generated or requested.
 
