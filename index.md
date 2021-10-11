@@ -9,6 +9,7 @@ What's New?
 
 * October 2021: [NSF Cybersecurity Summit Workshop on Token-Based Authentication and Authorization](https://sciauth.org/workshop/)
 * October 2021: [OSG Token Transition Workshop](https://opensciencegrid.org/events/Token-Transition-Workshop/)
+* September 2021: [SciTokens at HTCondor Workshop Autumn 2021](https://indico.cern.ch/event/1059494/contributions/4532569/)
 * August 2021: [Token Pilot Infrastructure Integration Hackathon](https://indico.fnal.gov/event/50700/)
 * July 2021: [SciAuth](https://sciauth.org/) project start. 
 * July 2021: [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. 
