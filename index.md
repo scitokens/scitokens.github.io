@@ -2,7 +2,7 @@
 layout: default
 ---
 
-The SciTokens project is building a federated ecosystem for authorization on distributed scientific computing infrastructures.
+The SciTokens project builds a federated ecosystem for authorization on distributed scientific computing infrastructures.
 
 What's New?
 -----------
