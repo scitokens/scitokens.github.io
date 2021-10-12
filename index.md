@@ -55,7 +55,7 @@ For SciTokens project updates and discussions, join our email lists:
 SciTokens Code
 --------------
 
-* Libraries: [Python](https://github.com/scitokens/scitokens) [C++](https://github.com/scitokens/scitokens-cpp) [Go](https://github.com/retzkek/scitokens-go)
+* Libraries: [Python](https://github.com/scitokens/scitokens) [C++](https://github.com/scitokens/scitokens-cpp) [Go](https://github.com/scitokens/scitokens-go)
 * Integrations: [Apache HTTPD](https://github.com/scitokens/apache-scitokens) [CVMFS](https://github.com/scitokens/cvmfs-scitokens-helper) [dCache](https://dcache.org/old/manuals/UserGuide-6.2/webdav.shtml) [NGINX](https://github.com/scitokens/nginx-scitokens) [XRootD](https://github.com/scitokens/xrootd-scitokens)
 * [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
 * [Token Server](https://github.com/scitokens/scitokens-java)
