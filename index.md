@@ -24,7 +24,7 @@ What's New?
 * September 2020: [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
 * July 2020: SciTokens SSH student [poster](presentations/SciTokens-SSH-PEARC20-Poster.pdf) [paper](https://doi.org/10.1145/3311790.3399613) presented at [PEARC20](https://pearc.acm.org/pearc20/)
 * May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
-* March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/scitokens/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
+* March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/xrootd/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
 * January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
 * January 2020: [SciTokens support contributed to XSEDE OAuth SSH](https://github.com/XSEDE/oauth-ssh/pull/69)
 * November 2019: [Instructions](technical_docs/OryHydra) for configuring the [ORY Hydra OAuth2 Server](https://www.ory.sh/docs/hydra/) to issue SciTokens.
