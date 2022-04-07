@@ -2,7 +2,8 @@
 layout: default
 ---
 
-The SciTokens project builds a federated ecosystem for authorization on distributed scientific computing infrastructures.
+The SciTokens project enables a federated ecosystem for authorization on distributed scientific computing infrastructures.
+For the latest news on adoption of SciTokens, please visit our companion project site at <https://sciauth.org/>.
 
 What's New?
 -----------
