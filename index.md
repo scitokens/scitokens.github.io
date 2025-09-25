@@ -3,9 +3,9 @@ layout: default
 ---
 
 The SciTokens project enables a federated ecosystem for authorization on distributed scientific computing infrastructures.
-For the latest news on adoption of SciTokens, please visit our companion project site at <https://sciauth.org/>.
+For additional information on adoption of SciTokens, please visit our companion project site at <https://sciauth.org/>.
 
-What's New?
+Project News
 -----------
 
 * October 2021: [NSF Cybersecurity Summit Workshop on Token-Based Authentication and Authorization](https://sciauth.org/workshop/)
