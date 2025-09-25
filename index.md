@@ -15,7 +15,7 @@ In distributed computing, a natural unit of organization is the "virtual organiz
 The SciTokens Model
 ----------------------
 
-The SciTokens project is developing a data access architecture for use with [LIGO](https://ligo.org/) and [LSST](https://www.lsst.org/) workflows.  The architecture is shown below:
+The SciTokens data architecture is shown below:
 
 ![SciTokens data architecture](img/SciTokens-Model-2.png)
 
