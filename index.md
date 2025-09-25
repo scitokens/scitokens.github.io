@@ -5,63 +5,6 @@ layout: default
 The SciTokens project enables a federated ecosystem for authorization on distributed scientific computing infrastructures.
 For additional information on adoption of SciTokens, please visit our companion project site at <https://sciauth.org/>.
 
-Project News
------------
-
-* October 2021: [NSF Cybersecurity Summit Workshop on Token-Based Authentication and Authorization](https://sciauth.org/workshop/)
-* October 2021: [OSG Token Transition Workshop](https://opensciencegrid.org/events/Token-Transition-Workshop/)
-* September 2021: [SciTokens at HTCondor Workshop Autumn 2021](https://indico.cern.ch/event/1059494/contributions/4532569/)
-* August 2021: [Token Pilot Infrastructure Integration Hackathon](https://indico.fnal.gov/event/50700/)
-* July 2021: [SciAuth](https://sciauth.org/) project start. 
-* July 2021: [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. 
-* July 2021: HTCondor 8.8.14, 9.0.3, and 9.1.1 releases address [HTCONDOR-2021-0004](https://research.cs.wisc.edu/htcondor/security/vulnerabilities/HTCONDOR-2021-0004.html) vulnerability with processing SciTokens.
-* June 2021: [WLCG CE & Factory Token Hackathon](https://indico.cern.ch/event/1032742/)
-* May 2021: SciTokens at [HTCondor Week](https://agenda.hep.wisc.edu/event/1579/)
-* April 2021: [HTCondor 9.0.0 Released](https://www-auth.cs.wisc.edu/lists/htcondor-world/2021/msg00006.shtml) with support for IDTOKEN authentication and support for jobs that need to acquire and use OAUTH tokens
-* March 2021: [Evolving the OSG Fabric of Services](https://indico.fnal.gov/event/47040/sessions/17920/) at the [OSG All Hands Meeting](https://opensciencegrid.org/all-hands/2021/)
-* January 2021: [SciTokens at Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
-* December 2020: [SciTokens at TAGPMA Workshop on Token-Based Authentication and Authorization](https://indico.rnp.br/event/33/)
-* November 2020: [HTCondor 8.9.10](https://htcondor.readthedocs.io/en/latest/version-history/development-release-series-89.html#version-8-9-10) added support for OAuth, SciTokens, and Kerberos credentials in local universe jobs.
-* September 2020: [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
-* July 2020: SciTokens SSH student [poster](presentations/SciTokens-SSH-PEARC20-Poster.pdf) [paper](https://doi.org/10.1145/3311790.3399613) presented at [PEARC20](https://pearc.acm.org/pearc20/)
-* May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
-* March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/xrootd/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
-* January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
-* January 2020: [SciTokens support contributed to XSEDE OAuth SSH](https://github.com/XSEDE/oauth-ssh/pull/69)
-* November 2019: [Instructions](technical_docs/OryHydra) for configuring the [ORY Hydra OAuth2 Server](https://www.ory.sh/docs/hydra/) to issue SciTokens.
-* November 2019: [HTCondor](https://research.cs.wisc.edu/htcondor/) 8.9.4 and HTCondor-CE 4.0.1 released with SciTokens support.
-* November 2019: The [Insomnia REST Client](https://insomnia.rest/) has been patched so that it can [obtain SciTokens](https://github.com/getinsomnia/insomnia/pull/1768) for authorization.
-* October 2019: Docker containers are available for testing the [Java SciTokens Server/Client](https://github.com/scitokens/docker-scitokens-java) and the [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
-* October 2019: SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf)
-* September 2019: SciTokens at [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/) and [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
-* September 2019: [WLCG Common JWT Profiles](https://doi.org/10.5281/zenodo.3460258) is published
-* July 2019: [SciTokens at PEARC19](https://groups.google.com/a/scitokens.org/forum/#!topic/announce/ZmP71C1a-8k)
-* June 2019: [HTCondor 8.9.2 released](https://htcondor.readthedocs.io/en/v8_9_2/version-history/development-release-series-89.html#version-8-9-2) with support for authentication using SciTokens
-* May 2019: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17)
-* April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
-* March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
-* February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
-* January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
-
-Email Lists
------------
-
-For SciTokens project updates and discussions, join our email lists:
-
-*   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
-*   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))
-*   ligo-discuss@scitokens.org ([subscribe](mailto:ligo-discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/ligo-discuss))
-
-
-SciTokens Code
---------------
-
-* Libraries: [Python](https://github.com/scitokens/scitokens) [C++](https://github.com/scitokens/scitokens-cpp) [Go](https://github.com/scitokens/scitokens-go)
-* Integrations: [Apache HTTPD](https://github.com/scitokens/apache-scitokens) [CVMFS](https://github.com/scitokens/cvmfs-scitokens-helper) [dCache](https://dcache.org/old/manuals/UserGuide-6.2/webdav.shtml) [NGINX](https://github.com/scitokens/nginx-scitokens) [XRootD](https://github.com/xrootd/xrootd-scitokens)
-* [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
-* [Token Server](https://github.com/scitokens/scitokens-java)
-* [SciTokens SSH](https://github.com/XSEDE/oauth-ssh/tree/master/server#scitokens)
-
 The SciTokens Mission
 ---------------------
 
@@ -85,6 +28,16 @@ Thus, the SciTokens architecture builds on the following concepts:
 2.  An authorization claims language and domain-specific claim validation rules.
 
 The project is bringing these concepts into a functioning infrastructure for its science stakeholders, which will require a token reference library, integration with a job submission system, and integration with a data access system..
+
+SciTokens Code
+--------------
+
+* Libraries: [Python](https://github.com/scitokens/scitokens) [C++](https://github.com/scitokens/scitokens-cpp) [Go](https://github.com/scitokens/scitokens-go)
+* Integrations: [Apache HTTPD](https://github.com/scitokens/apache-scitokens) [CVMFS](https://github.com/scitokens/cvmfs-scitokens-helper) [dCache](https://dcache.org/old/manuals/UserGuide-6.2/webdav.shtml) [NGINX](https://github.com/scitokens/nginx-scitokens) [XRootD](https://github.com/xrootd/xrootd-scitokens)
+* [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
+* [Token Server](https://github.com/scitokens/scitokens-java)
+* [SciTokens SSH](https://github.com/XSEDE/oauth-ssh/tree/master/server#scitokens)
+
 
 References
 ----------
@@ -126,3 +79,50 @@ Demonstrations and Presentations
 * [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. July 26 2021.
 *   [Token Generator Webapp](https://demo.scitokens.org).  Small webapp for generating and parsing valid tokens from a demo issuer.
 *   [X509-to-SciTokens Issuer](https://cms.scitokens.org/token).  Token issuer for clients with CMS X509 proxies.  Note: this implements the OAuth2 `client_credentials` grant type and does not have a human interface.
+
+Email Lists
+-----------
+
+For SciTokens project updates and discussions, join our email lists:
+
+*   announce@scitokens.org ([subscribe](mailto:announce+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/announce))
+*   discuss@scitokens.org ([subscribe](mailto:discuss+subscribe@scitokens.org)) ([archives](https://groups.google.com/a/scitokens.org/d/forum/discuss))
+
+Project News
+-----------
+
+* October 2021: [NSF Cybersecurity Summit Workshop on Token-Based Authentication and Authorization](https://sciauth.org/workshop/)
+* October 2021: [OSG Token Transition Workshop](https://opensciencegrid.org/events/Token-Transition-Workshop/)
+* September 2021: [SciTokens at HTCondor Workshop Autumn 2021](https://indico.cern.ch/event/1059494/contributions/4532569/)
+* August 2021: [Token Pilot Infrastructure Integration Hackathon](https://indico.fnal.gov/event/50700/)
+* July 2021: [SciAuth](https://sciauth.org/) project start. 
+* July 2021: [Trusted CI webinar](https://www.trustedci.org/webinars): A capability-based authorization infrastructure for distributed High Throughput Computing with Brian Bockelman. 
+* July 2021: HTCondor 8.8.14, 9.0.3, and 9.1.1 releases address [HTCONDOR-2021-0004](https://research.cs.wisc.edu/htcondor/security/vulnerabilities/HTCONDOR-2021-0004.html) vulnerability with processing SciTokens.
+* June 2021: [WLCG CE & Factory Token Hackathon](https://indico.cern.ch/event/1032742/)
+* May 2021: SciTokens at [HTCondor Week](https://agenda.hep.wisc.edu/event/1579/)
+* April 2021: [HTCondor 9.0.0 Released](https://www-auth.cs.wisc.edu/lists/htcondor-world/2021/msg00006.shtml) with support for IDTOKEN authentication and support for jobs that need to acquire and use OAUTH tokens
+* March 2021: [Evolving the OSG Fabric of Services](https://indico.fnal.gov/event/47040/sessions/17920/) at the [OSG All Hands Meeting](https://opensciencegrid.org/all-hands/2021/)
+* January 2021: [SciTokens at Trusted CI Webinar](https://www.trustedci.org/webinars) (see: [slides](https://hdl.handle.net/2142/109212) and [video](https://youtu.be/9bbF8FRzN7k))
+* December 2020: [SciTokens at TAGPMA Workshop on Token-Based Authentication and Authorization](https://indico.rnp.br/event/33/)
+* November 2020: [HTCondor 8.9.10](https://htcondor.readthedocs.io/en/latest/version-history/development-release-series-89.html#version-8-9-10) added support for OAuth, SciTokens, and Kerberos credentials in local universe jobs.
+* September 2020: [SciTokens at HTCondor Workshop Autumn 2020](https://indico.cern.ch/event/936993/contributions/4020913/)
+* July 2020: SciTokens SSH student [poster](presentations/SciTokens-SSH-PEARC20-Poster.pdf) [paper](https://doi.org/10.1145/3311790.3399613) presented at [PEARC20](https://pearc.acm.org/pearc20/)
+* May 2020: [SciTokens at HTCondor Week](http://htcondor.org/HTCondorWeek2020)
+* March 2020: [xrootd-scitokens plugin v1.2.0](https://github.com/xrootd/xrootd-scitokens/releases/tag/v1.2.0) released with fix for authorization logic error
+* January 2020: [WLCG Token-based AuthN/Z Hackathon](https://indico.cern.ch/event/870616/)
+* January 2020: [SciTokens support contributed to XSEDE OAuth SSH](https://github.com/XSEDE/oauth-ssh/pull/69)
+* November 2019: [Instructions](technical_docs/OryHydra) for configuring the [ORY Hydra OAuth2 Server](https://www.ory.sh/docs/hydra/) to issue SciTokens.
+* November 2019: [HTCondor](https://research.cs.wisc.edu/htcondor/) 8.9.4 and HTCondor-CE 4.0.1 released with SciTokens support.
+* November 2019: The [Insomnia REST Client](https://insomnia.rest/) has been patched so that it can [obtain SciTokens](https://github.com/getinsomnia/insomnia/pull/1768) for authorization.
+* October 2019: Docker containers are available for testing the [Java SciTokens Server/Client](https://github.com/scitokens/docker-scitokens-java) and the [HTCondor CredMon](https://github.com/htcondor/scitokens-credmon)
+* October 2019: SciTokens at the [NSF Cybersecurity Summit](https://trustedci.org/2019-nsf-cybersecurity-summit) - [slides](presentations/SciTokens-NSFCyberSummit-Oct2019.pdf)
+* September 2019: SciTokens at [WLCG AuthZ WG Meeting](https://indico.cern.ch/event/739896/) and [European HTCondor Workshop](https://indico.cern.ch/event/817927/overview)
+* September 2019: [WLCG Common JWT Profiles](https://doi.org/10.5281/zenodo.3460258) is published
+* July 2019: [SciTokens at PEARC19](https://groups.google.com/a/scitokens.org/forum/#!topic/announce/ZmP71C1a-8k)
+* June 2019: [HTCondor 8.9.2 released](https://htcondor.readthedocs.io/en/v8_9_2/version-history/development-release-series-89.html#version-8-9-2) with support for authentication using SciTokens
+* May 2019: [SciTokens at HTCondor Week](https://agenda.hep.wisc.edu/event/1325/session/17/contribution/17)
+* April 2019: [SciTokens input on the WLCG Common JWT Profile](https://docs.google.com/document/d/1cNm4nBl9ELhExwLxswpxLLNTuz8pT38-b_DewEyEWug/edit?usp=sharing)
+* March 2019: [SciTokens at HOW2019](https://groups.google.com/a/scitokens.org/forum/#!msg/announce/WJjSf2PQTmI/a97bA05tDAAJ)
+* February 2019: [SciTokens Credential Monitor available for HTCondor](https://github.com/htcondor/scitokens-credmon)
+* January 2019: [Syracuse SciTokens Setup](https://gist.github.com/duncan-brown/fb5e83b86814baeda001316a6bdfcc3b)
+
